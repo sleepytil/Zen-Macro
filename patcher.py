@@ -4,6 +4,7 @@ import subprocess
 
 def popup(message, title):
     applescript = """
+    
     display dialog "{message}" ¬
     with title "{title}" ¬
     with icon caution ¬

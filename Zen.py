@@ -16,7 +16,7 @@ print("""
       Zen Macro (by cm3t)
       
       [DEBUG INFO]
-      Version: v1.2.0 (20 September 2025)
+      Version: v2.0.0 (Dev Beta) (20 September 2025)
       Support: https://discord.gg/solsniper
       """)
 logging.basicConfig(
@@ -67,7 +67,7 @@ def apply_fast_flags(version):
     with open("/Applications/Roblox.app/Contents/MacOS/ClientSettings/ClientAppSettings.json", "w") as f:
         json.dump(existing_data, f, indent=4)
     print("Successfully patched Roblox and added fast flags.")
-
+    popup("Roblox has successfully been patched.\nPlease restart Roblox for changes to take effect.", "Zen")   
 
 # exception handler / logger
 sys.excepthook = my_handler
@@ -112,8 +112,8 @@ last_roblox_version = config['Macro']['last_roblox_version']
 username_override = config['Macro']['username_override']
 roblox_open = False
 log_directory = platformdirs.user_log_dir("Roblox", None)
-biome_colors = {"NORMAL": "ffffff", "SAND STORM": "F4C27C", "HELL": "5C1219", "STARFALL": "6784E0", "CORRUPTION": "9042FF", "NULL": "000000", "GLITCHED": "65FF65", "WINDY": "91F7FF", "SNOWY": "C4F5F6", "RAINY": "4385FF", "DREAMSPACE": "ff7dff", "BLAZING SUN": "ffee8c"}
-biome_times = {"SAND STORM": 600, "HELL": 660, "STARFALL": 600, "CORRUPTION": 660, "NULL": 99, "GLITCHED": 164, "WINDY": 120, "SNOWY": 120, "RAINY": 120, "DREAMSPACE": 128, "BLAZING SUN": 180}
+biome_colors = {"NORMAL": "ffffff", "SAND STORM": "F4C27C", "HELL": "5C1219", "STARFALL": "6784E0", "CORRUPTION": "9042FF", "NULL": "000000", "GLITCHED": "65FF65", "WINDY": "91F7FF", "SNOWY": "C4F5F6", "RAINY": "4385FF", "DREAMSPACE": "ff7dff", "BLAZING SUN": "ffee8c", "PUMPKIN MOON": "FFA500", "GRAVEYARD": "646464", "BLOOD RAIN": "FF0000"}
+biome_times = {"SAND STORM": 600, "HELL": 660, "STARFALL": 600, "CORRUPTION": 660, "NULL": 99, "GLITCHED": 164, "WINDY": 120, "SNOWY": 120, "RAINY": 120, "DREAMSPACE": 128, "BLAZING SUN": 180, "PUMPKIN MOON": 300, "GRAVEYARD": 300, "BLOOD RAIN": 600}
 started = False
 stopped = False
 paused = False
@@ -685,7 +685,7 @@ def init():
     # start webhook
     starting_embed = discord_webhook.DiscordEmbed(
         title="`Macro Started`",
-        description="Macro Version: v1.2.0",
+        description="> Macro Started\nMacro Version: v2.0.0 (Dev Beta)",
         timestamp=datetime.datetime.now(datetime.timezone.utc))
     starting_embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
     if multi_webhook.get() != "1":
@@ -846,7 +846,7 @@ comet_link.bind("<Button-1>", lambda e: open_url("https://github.com/cm3t"))
 sniper_label = customtkinter.CTkLabel(credits_frame, text="Zen", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
 sniper_label.grid(row=2, column=0, padx=(10, 0), sticky="nw")
 
-support_link = customtkinter.CTkLabel(credits_frame, text="v1.2.0", font=("Segoe UI", 14))
+support_link = customtkinter.CTkLabel(credits_frame, text="v2.0.0 (Dev Beta)", font=("Segoe UI", 14))
 support_link.grid(row=3, column=0, padx=(10, 0), sticky="nw")
 # support_link.bind("<Button-1>", lambda e: open_url("https://discord.gg/solsniper"))
 
@@ -867,5 +867,7 @@ detectping_toggle.grid(row=2, column=0, columnspan=2, padx=(10, 0), pady=(12, 0)
 
 root.bind("<Destroy>", lambda event: x_stop())
 root.bind("<Button-1>", lambda e: e.widget.focus_set())
+
+apply_fast_flags()
 
 root.mainloop()
