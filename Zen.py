@@ -13,10 +13,10 @@ import subprocess
 import platformdirs
 import datetime
 print("""
-      Zen Macro (by cm3t)
+      Zen Macro (by sleepytil)
       
       [DEBUG INFO]
-      Version: v2.0.0 (Dev Beta) (20 September 2025)
+      Version: v1.3 (28 November 2025)
       Support: https://discord.gg/solsniper
       """)
 logging.basicConfig(
@@ -142,7 +142,7 @@ def stop():
                 ending_embed = discord_webhook.DiscordEmbed(
                     title="`Macro Started`",
                     timestamp=datetime.datetime.now(datetime.timezone.utc))
-                ending_embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                ending_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                 ending_webhook.add_embed(ending_embed)
                 ending_webhook.execute()
 
@@ -150,7 +150,7 @@ def stop():
             ending_embed = discord_webhook.DiscordEmbed(
                 title="`Macro Started`",
                 timestamp=datetime.datetime.now(datetime.timezone.utc))
-            ending_embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+            ending_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
             for url in webhook_urls:
                 ending_webhook = discord_webhook.DiscordWebhook(url=url)
                 ending_webhook.add_embed(ending_embed)
@@ -246,8 +246,8 @@ def check_for_hover_text(file):
                                                 timestamp=datetime.datetime.now(datetime.timezone.utc),
                                                 color=biome_colors[last_event],
                                                 title=f"`Biome Ended: {last_event}`")
-                                            embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/" + last_event.replace(" ", "%20") + ".png")
-                                            embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                            embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/" + last_event.replace(" ", "%20") + ".png")
+                                            embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                             webhook.add_embed(embed)
                                             webhook.execute()
                                         else:
@@ -257,8 +257,8 @@ def check_for_hover_text(file):
                                         biomeEndingTime = int(time.time()) + biome_times[event]
                                         embed = discord_webhook.DiscordEmbed(title=f"`Biome Started: {event}`",timestamp=datetime.datetime.now(datetime.timezone.utc), color=biome_colors[event])
                                         embed.description = "\n[Join Server](" + psURL.get() + ")\n-# Ends <t:" + str(biomeEndingTime) + ":R>"
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/" + event.replace(" ", "%20") + ".png")
-                                        embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/" + event.replace(" ", "%20") + ".png")
+                                        embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                         webhook.add_embed(embed)
                                         if event == "GLITCHED" or event == "DREAMSPACE":
                                             webhook.set_content("@everyone")
@@ -274,8 +274,8 @@ def check_for_hover_text(file):
                                                     timestamp=datetime.datetime.now(datetime.timezone.utc),
                                                     color=biome_colors[last_event],
                                                     title=f"`Biome Ended: {last_event}`")
-                                                embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/" + last_event.replace(" ", "%20") + ".png")
-                                                embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                                embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/" + last_event.replace(" ", "%20") + ".png")
+                                                embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                                 webhook.add_embed(embed)
                                                 webhook.execute()
                                         else:
@@ -286,8 +286,8 @@ def check_for_hover_text(file):
                                         for url in webhook_urls:
                                             embed = discord_webhook.DiscordEmbed(title=f"`Biome Started: {event}`",timestamp=datetime.datetime.now(datetime.timezone.utc), color=biome_colors[event])
                                             embed.description = "\n[Join Server](" + psURL.get() + ")\n-# Ends <t:" + str(biomeEndingTime) + ":R>"
-                                            embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/" + event.replace(" ", "%20") + ".png")
-                                            embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                            embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/" + event.replace(" ", "%20") + ".png")
+                                            embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                             webhook = discord_webhook.DiscordWebhook(url=url)
                                             webhook.add_embed(embed)
                                             if event == "GLITCHED" or event == "DREAMSPACE":
@@ -308,7 +308,7 @@ def check_for_hover_text(file):
                                         embed = discord_webhook.DiscordEmbed(
                                             timestamp=datetime.datetime.now(datetime.timezone.utc),
                                             title=f"`Aura Equipped: {aura}`")
-                                        embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                        embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                         webhook.add_embed(embed)
                                         webhook.execute()
                                     else:
@@ -318,7 +318,7 @@ def check_for_hover_text(file):
                                             embed = discord_webhook.DiscordEmbed(
                                                 timestamp=datetime.datetime.now(datetime.timezone.utc),
                                                 title=f"`Aura Equipped: {aura}`")
-                                            embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                            embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                             webhook.add_embed(embed)
                                             webhook.execute()
                                 last_aura = aura
@@ -355,15 +355,15 @@ def check_for_hover_text(file):
                                         title=f"`You rolled {aura}!`",
                                         description="**1 in " + rarity + "**",
                                         color=message_color)
-                                    embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                    embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                     if message_color == "ff73fd":
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/MYTHIC.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/MYTHIC.png")
                                     elif message_color == "200cff":
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/EXALTED.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/EXALTED.png")
                                     elif message_color == "ff3892":
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/GLORIOUS.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/GLORIOUS.png")
                                     else:
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/ANY.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/ANY.png")
                                     # embed.set_thumbnail(url=aura_images[aura.lower()])
                                     webhook.add_embed(embed)
                                     if aura_ping.get() == 1:
@@ -380,15 +380,15 @@ def check_for_hover_text(file):
                                             title=f"`You rolled {aura}!`",
                                             description="**1 in " + rarity + "**",
                                             color=message_color)
-                                        embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                        embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                         if message_color == "ff73fd":
-                                            embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/MYTHIC.png")
+                                            embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/MYTHIC.png")
                                         elif message_color == "200cff":
-                                            embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/EXALTED.png")
+                                            embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/EXALTED.png")
                                         elif message_color == "ff3892":
-                                            embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/GLORIOUS.png")
+                                            embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/GLORIOUS.png")
                                         else:
-                                            embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/ANY.png")
+                                            embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/ANY.png")
                                         # embed.set_thumbnail(url=aura_images[aura.lower()])
                                         webhook.add_embed(embed)
                                         if aura_ping.get() == 1:
@@ -406,8 +406,8 @@ def check_for_hover_text(file):
                                         title=f"`The Blinding Light has devoured {roblox_username}`",
                                         description="**1 in 1,200,000,000**",
                                         color="98b7e0")
-                                    embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
-                                    embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/Luminosity.png")
+                                    embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
+                                    embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/Luminosity.png")
                                     webhook.add_embed(embed)
                                     if aura_ping.get() == 1:
                                         webhook.set_content(f"<@{discID.get()}>")
@@ -423,8 +423,8 @@ def check_for_hover_text(file):
                                             title=f"`The Blinding Light has devoured {roblox_username}`",
                                             description="**1 in 1,200,000,000**",
                                             color="98b7e0")
-                                        embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/Luminosity.png")
+                                        embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/Luminosity.png")
                                         webhook.add_embed(embed)
                                         if aura_ping.get() == 1:
                                             webhook.set_content(f"<@{discID.get()}>")
@@ -441,8 +441,8 @@ def check_for_hover_text(file):
                                         title=f"`@{roblox_username} has become PIXELATED!`",
                                         description="**1 in 1,073,741,824**",
                                         color="ff0000")
-                                    embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
-                                    embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/Pixelation.png")
+                                    embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
+                                    embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/Pixelation.png")
                                     webhook.add_embed(embed)
                                     if aura_ping.get() == 1:
                                         webhook.set_content(f"<@{discID.get()}>")
@@ -458,8 +458,8 @@ def check_for_hover_text(file):
                                             title=f"`@{roblox_username} has become PIXELATED!`",
                                             description="**1 in 1,073,741,824**",
                                             color="ff0000")
-                                        embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/Pixelation.png")
+                                        embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/Pixelation.png")
                                         webhook.add_embed(embed)
                                         if aura_ping.get() == 1:
                                             webhook.set_content(f"<@{discID.get()}>")
@@ -476,8 +476,8 @@ def check_for_hover_text(file):
                                         title=f"`@{roblox_username} has found the [???????] between POSITIVE and NEGATIVE.`",
                                         description="**1 in 2,500,000,000**",
                                         color="000000")
-                                    embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
-                                    embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/EQUINOX.png")
+                                    embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
+                                    embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/EQUINOX.png")
                                     webhook.add_embed(embed)
                                     if aura_ping.get() == 1:
                                         webhook.set_content(f"<@{discID.get()}>")
@@ -493,8 +493,8 @@ def check_for_hover_text(file):
                                             title=f"`@{roblox_username} has found the [???????] between POSITIVE and NEGATIVE.`",
                                             description="**1 in 2,500,000,000**",
                                             color="000000")
-                                        embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
-                                        embed.set_thumbnail(url="https://cm3t.github.io/biome_thumb/EQUINOX.png")
+                                        embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
+                                        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/EQUINOX.png")
                                         webhook.add_embed(embed)
                                         if aura_ping.get() == 1:
                                             webhook.set_content(f"<@{discID.get()}>")
@@ -511,9 +511,9 @@ def check_for_hover_text(file):
                                     description=f"[Join Server]({psURL.get()})\n-# <t:{int(time.time())}:R>",
                                     color="a352ff"
                                 )
-                                embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                 embed.set_thumbnail(
-                                    url="https://cm3t.github.io/biome_thumb/JESTER.png")
+                                    url="https://sleepytil.github.io/biome_thumb/JESTER.png")
                                 webhook.add_embed(embed)
                                 webhook.set_content(f"<@{discID.get()}>")
                                 webhook.execute()
@@ -527,9 +527,9 @@ def check_for_hover_text(file):
                                         description=f"[Join Server]({psURL.get()})\n-# <t:{int(time.time())}:R>",
                                         color="a352ff"
                                     )
-                                    embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                    embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                     embed.set_thumbnail(
-                                        url="https://cm3t.github.io/biome_thumb/JESTER.png")
+                                        url="https://sleepytil.github.io/biome_thumb/JESTER.png")
                                     webhook.add_embed(embed)
                                     webhook.set_content(f"<@{discID.get()}>")
                                     webhook.execute()
@@ -543,9 +543,9 @@ def check_for_hover_text(file):
                                 description=f"[Join Server]({psURL.get()})\n-# <t:{int(time.time())}:R>",
                                 color="c49345"
                             )
-                            embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                            embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                             embed.set_thumbnail(
-                                url="https://cm3t.github.io/biome_thumb/MARI.png")
+                                url="https://sleepytil.github.io/biome_thumb/MARI.png")
                             webhook.add_embed(embed)
                             webhook.set_content(f"<@{discID.get()}>")
                             webhook.execute()
@@ -559,9 +559,9 @@ def check_for_hover_text(file):
                                     description=f"[Join Server]({psURL.get()})\n-# <t:{int(time.time())}:R>",
                                     color="c49345"
                                 )
-                                embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                                embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                 embed.set_thumbnail(
-                                    url="https://cm3t.github.io/biome_thumb/MARI.png")
+                                    url="https://sleepytil.github.io/biome_thumb/MARI.png")
                                 webhook.add_embed(embed)
                                 webhook.set_content(f"<@{discID.get()}>")
                                 webhook.execute()
@@ -575,7 +575,7 @@ def check_for_hover_text(file):
                             description=f"[Join Server]({psURL.get()})\n-# <t:{int(time.time())}:R>",
                             color="000000"
                         )
-                        embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                        embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                         embed.set_thumbnail(
                             url="https://maxstellar.github.io/biome_thumb/eden.png")
                         webhook.add_embed(embed)
@@ -591,7 +591,7 @@ def check_for_hover_text(file):
                                 description=f"[Join Server]({psURL.get()})\n-# <t:{int(time.time())}:R>",
                                 color="000000"
                             )
-                            embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                            embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                             embed.set_thumbnail(
                                 url="https://maxstellar.github.io/biome_thumb/eden.png")
                             webhook.add_embed(embed)
@@ -610,7 +610,7 @@ def check_for_hover_text(file):
                 close_embed = discord_webhook.DiscordEmbed(
                     title="`Roblox Closed/Crashed`",
                     timestamp=datetime.datetime.now(datetime.timezone.utc))
-                close_embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                close_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                 close_webhook.add_embed(close_embed)
                 close_webhook.execute()
             else:
@@ -619,7 +619,7 @@ def check_for_hover_text(file):
                     close_embed = discord_webhook.DiscordEmbed(
                         title="`Roblox Closed/Crashed`",
                         timestamp=datetime.datetime.now(datetime.timezone.utc))
-                    close_embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+                    close_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                     close_webhook.add_embed(close_embed)
                     close_webhook.execute()
 
@@ -687,7 +687,7 @@ def init():
         title="`Macro Started`",
         description="> Macro Started\nMacro Version: v2.0.0 (Dev Beta)",
         timestamp=datetime.datetime.now(datetime.timezone.utc))
-    starting_embed.set_author(name="Zen", icon_url="https://cm3t.github.io/biome_thumb/zen.png")
+    starting_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
     if multi_webhook.get() != "1":
         if "discord.com" not in webhookURL.get() or "https://" not in webhookURL.get():
             popup("Invalid or missing webhook link.", "Error")
@@ -825,7 +825,7 @@ stop_button = customtkinter.CTkButton(root, text="Stop",
 stop_button.grid(row=1, column=2, padx=(5, 0), pady=(10, 0), sticky="w")
 
 
-comet_pfp = customtkinter.CTkImage(dark_image=Image.open("cm3t.png"), size=(100, 100))
+comet_pfp = customtkinter.CTkImage(dark_image=Image.open("sleepytil.png"), size=(100, 100))
 comet_pfp_label = customtkinter.CTkLabel(tabview.tab("Credits"), image=comet_pfp, text="")
 comet_pfp_label.grid(row=0, column=0, padx=(10, 0), pady=(10, 0), sticky="w")
 
@@ -836,12 +836,12 @@ zen_label.grid(row=0, column=1, padx=(10, 0), pady=(10, 0), sticky="w")
 credits_frame = customtkinter.CTkFrame(tabview.tab("Credits"))
 credits_frame.grid(row=0, column=2, padx=(10, 0), pady=(10, 0), sticky="w")
 
-comet_label = customtkinter.CTkLabel(credits_frame, text="cm3t - Creator", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
+comet_label = customtkinter.CTkLabel(credits_frame, text="sleepytil - Creator", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
 comet_label.grid(row=0, column=0, padx=(10, 0), sticky="nw")
 
 comet_link = customtkinter.CTkLabel(credits_frame, text="GitHub", font=("Segoe UI", 14, "underline"), text_color="dodgerblue", cursor="pointinghand")
 comet_link.grid(row=1, column=0, padx=(10, 0), sticky="nw")
-comet_link.bind("<Button-1>", lambda e: open_url("https://github.com/cm3t"))
+comet_link.bind("<Button-1>", lambda e: open_url("https://github.com/sleepytil"))
 
 sniper_label = customtkinter.CTkLabel(credits_frame, text="Zen", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
 sniper_label.grid(row=2, column=0, padx=(10, 0), sticky="nw")
