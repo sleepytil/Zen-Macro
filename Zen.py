@@ -16,7 +16,7 @@ print("""
       Zen Macro (by sleepytil)
       
       [DEBUG INFO]
-      Version: v1.3 (28 November 2025)
+      Version: v1.3.1 (29 November 2025)
       Support: https://discord.gg/solsniper
       """)
 logging.basicConfig(
@@ -113,7 +113,7 @@ username_override = config['Macro']['username_override']
 roblox_open = False
 log_directory = platformdirs.user_log_dir("Roblox", None)
 biome_colors = {"NORMAL": "ffffff", "SAND STORM": "F4C27C", "HELL": "5C1219", "STARFALL": "6784E0", "CORRUPTION": "9042FF", "NULL": "000000", "GLITCHED": "65FF65", "WINDY": "91F7FF", "SNOWY": "C4F5F6", "RAINY": "4385FF", "DREAMSPACE": "ff7dff", "BLAZING SUN": "ffee8c", "PUMPKIN MOON": "FFA500", "GRAVEYARD": "646464", "BLOOD RAIN": "FF0000", "CYBERSPACE": "03045E"}
-biome_times = {"SAND STORM": 600, "HELL": 660, "STARFALL": 600, "CORRUPTION": 660, "NULL": 99, "GLITCHED": 164, "WINDY": 120, "SNOWY": 120, "RAINY": 120, "DREAMSPACE": 128, "BLAZING SUN": 180, "PUMPKIN MOON": 300, "GRAVEYARD": 300, "BLOOD RAIN": 600, "CYBERSPACE": 180}
+biome_times = {"SAND STORM": 600, "HELL": 660, "STARFALL": 600, "CORRUPTION": 660, "NULL": 99, "GLITCHED": 164, "WINDY": 120, "SNOWY": 120, "RAINY": 120, "DREAMSPACE": 128, "BLAZING SUN": 180, "PUMPKIN MOON": 300, "GRAVEYARD": 300, "BLOOD RAIN": 600, "CYBERSPACE": 720}
 started = False
 stopped = False
 paused = False
@@ -140,7 +140,7 @@ def stop():
             if "discord.com" in webhookURL.get() and "https://" in webhookURL.get():
                 ending_webhook = discord_webhook.DiscordWebhook(url=webhookURL.get())
                 ending_embed = discord_webhook.DiscordEmbed(
-                    title="`Macro Started`",
+                    title="`Macro Stopped`",
                     timestamp=datetime.datetime.now(datetime.timezone.utc))
                 ending_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                 ending_webhook.add_embed(ending_embed)
@@ -148,7 +148,7 @@ def stop():
 
         else:
             ending_embed = discord_webhook.DiscordEmbed(
-                title="`Macro Started`",
+                title="`Macro Stopped`",
                 timestamp=datetime.datetime.now(datetime.timezone.utc))
             ending_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
             for url in webhook_urls:
@@ -260,7 +260,7 @@ def check_for_hover_text(file):
                                         embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/" + event.replace(" ", "%20") + ".png")
                                         embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                         webhook.add_embed(embed)
-                                        if event == "GLITCHED" or event == "DREAMSPACE":
+                                        if event == "GLITCHED" or event == "DREAMSPACE" or event == "CYBERSPACE":
                                             webhook.set_content("@everyone")
                                             notify("Zen", "Biome Started: " + event)
                                         webhook.execute()
@@ -290,10 +290,10 @@ def check_for_hover_text(file):
                                             embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
                                             webhook = discord_webhook.DiscordWebhook(url=url)
                                             webhook.add_embed(embed)
-                                            if event == "GLITCHED" or event == "DREAMSPACE":
+                                            if event == "GLITCHED" or event == "DREAMSPACE" or event == "CYBERSPACE":
                                                 webhook.set_content("@everyone")
                                             webhook.execute()
-                                        if event == "GLITCHED" or event == "DREAMSPACE":
+                                        if event == "GLITCHED" or event == "DREAMSPACE" or event == "CYBERSPACE":
                                             notify("Zen", "Biome Started: " + event)
                                 last_event = event
                             if state and aura != last_aura and aura != "n":
@@ -685,7 +685,7 @@ def init():
     # start webhook
     starting_embed = discord_webhook.DiscordEmbed(
         title="`Macro Started`",
-        description="> Macro Started\nMacro Version: v2.0.0 (Dev Beta)",
+        description="> Macro Started\nMacro Version: v1.3.1",
         timestamp=datetime.datetime.now(datetime.timezone.utc))
     starting_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
     if multi_webhook.get() != "1":
@@ -846,7 +846,7 @@ comet_link.bind("<Button-1>", lambda e: open_url("https://github.com/sleepytil")
 sniper_label = customtkinter.CTkLabel(credits_frame, text="Zen", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
 sniper_label.grid(row=2, column=0, padx=(10, 0), sticky="nw")
 
-support_link = customtkinter.CTkLabel(credits_frame, text="v2.0.0 (Dev Beta)", font=("Segoe UI", 14))
+support_link = customtkinter.CTkLabel(credits_frame, text="v1.3.1", font=("Segoe UI", 14))
 support_link.grid(row=3, column=0, padx=(10, 0), sticky="nw")
 # support_link.bind("<Button-1>", lambda e: open_url("https://discord.gg/solsniper"))
 
