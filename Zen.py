@@ -16,7 +16,7 @@ print("""
       Zen Macro (by sleepytil)
       
       [DEBUG INFO]
-      Version: v1.3.1 (29 November 2025)
+      Version: v1.3.2 (30 November 2025)
       Support: https://discord.gg/solsniper
       """)
 logging.basicConfig(
@@ -51,23 +51,6 @@ def my_handler(types, value, tb):
     logger.exception("Uncaught exception: {0}".format(str(value)))
     popup("Check crash.log for information on this crash.", "Crashed!")
     sys.exit()
-
-def apply_fast_flags(version):
-    try:
-        os.mkdir("/Applications/Roblox.app/Contents/MacOS/ClientSettings")
-    except FileExistsError:
-        print("ClientSettings folder already exists.")
-    flags = {"FStringDebugLuaLogLevel": "debug", "FStringDebugLuaLogPattern": "ExpChat/mountClientApp"}
-    try:
-        with open("/Applications/Roblox.app/Contents/MacOS/ClientSettings/ClientAppSettings.json", "r") as f:
-            existing_data = json.load(f)
-    except FileNotFoundError:
-        existing_data = {}
-    existing_data.update(flags)
-    with open("/Applications/Roblox.app/Contents/MacOS/ClientSettings/ClientAppSettings.json", "w") as f:
-        json.dump(existing_data, f, indent=4)
-    print("Successfully patched Roblox and added fast flags.")
-    popup("Roblox has successfully been patched.\nPlease restart Roblox for changes to take effect.", "Zen")   
 
 # exception handler / logger
 sys.excepthook = my_handler
@@ -685,7 +668,7 @@ def init():
     # start webhook
     starting_embed = discord_webhook.DiscordEmbed(
         title="`Macro Started`",
-        description="> Macro Started\nMacro Version: v1.3.1",
+        description="> Macro Started\nMacro Version: v1.3.2",
         timestamp=datetime.datetime.now(datetime.timezone.utc))
     starting_embed.set_author(name="Zen", icon_url="https://sleepytil.github.io/biome_thumb/zen.png")
     if multi_webhook.get() != "1":
@@ -759,7 +742,6 @@ def init():
                     config.set('Macro', 'last_roblox_version', last_roblox_version)
                     with open(config_name, 'w+') as configfile:
                         config.write(configfile)
-                    apply_fast_flags(update_version)
             elif "Local character loaded:" in line and "Incoming MessageReceived Status:" not in line:
                 try:
                     _, _, roblox_username = line.partition("Local character loaded: ")
@@ -772,12 +754,6 @@ def init():
                     logger.error("Encountered error finding username.")
                     stop()
 
-
-def patch_roblox():
-    global last_roblox_version
-    if not started:
-        popup('Start the macro by clicking the "Start" button before attempting to patch Roblox.', "Error")
-    apply_fast_flags(last_roblox_version)
 
 tabview.set("Webhook")
 
@@ -846,7 +822,7 @@ comet_link.bind("<Button-1>", lambda e: open_url("https://github.com/sleepytil")
 sniper_label = customtkinter.CTkLabel(credits_frame, text="Zen", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
 sniper_label.grid(row=2, column=0, padx=(10, 0), sticky="nw")
 
-support_link = customtkinter.CTkLabel(credits_frame, text="v1.3.1", font=("Segoe UI", 14))
+support_link = customtkinter.CTkLabel(credits_frame, text="v1.3.2", font=("Segoe UI", 14))
 support_link.grid(row=3, column=0, padx=(10, 0), sticky="nw")
 # support_link.bind("<Button-1>", lambda e: open_url("https://discord.gg/solsniper"))
 
@@ -867,7 +843,5 @@ detectping_toggle.grid(row=2, column=0, columnspan=2, padx=(10, 0), pady=(12, 0)
 
 root.bind("<Destroy>", lambda event: x_stop())
 root.bind("<Button-1>", lambda e: e.widget.focus_set())
-
-apply_fast_flags()
 
 root.mainloop()
