@@ -1,0 +1,10 @@
+Zen Macro (v2.0)
+Changelogs:
+- Revamped UI
+- Added the screenshot function (to use, run this in terminal: pip3 install pyautogui)
+- Revamped Embeds (also added new functionality with them)
+- Rare Biome Screenshots
+- Webhook Activity Info
+
+Eventually, the macro will release on Windows.
+For now, enjoy functionality for Mac users!

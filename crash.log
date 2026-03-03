@@ -72,3 +72,324 @@ NoneType: None
 2025-09-13 12:57:04,310 - INFO - Roblox is open.
 2025-09-13 12:57:09,323 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.690.0.6900721_20250913T113016Z_Player_7d132_last.log
 2025-09-13 13:02:28,386 - INFO - Config file not found, creating one...
+2025-09-20 17:15:19,089 - INFO - Roblox is open.
+2025-09-20 17:15:24,098 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250920T153526Z_Player_841af_last.log
+2025-09-20 21:19:28,417 - INFO - Roblox is open.
+2025-09-20 21:19:33,431 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250920T175417Z_Player_b0b88_last.log
+2025-09-21 17:29:01,104 - INFO - Roblox is open.
+2025-09-21 17:29:06,113 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250921T155626Z_Player_9b5e4_last.log
+2025-09-22 16:40:08,811 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250922T154004Z_Player_667ba_last.log
+2025-09-22 20:33:57,543 - INFO - Roblox is open.
+2025-09-22 20:34:02,549 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250922T154004Z_Player_667ba_last.log
+2025-09-23 20:54:17,845 - INFO - Roblox is open.
+2025-09-23 20:54:22,849 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250923T171737Z_Studio_ab8e7_last.log
+2025-09-24 06:52:49,098 - INFO - Roblox is open.
+2025-09-24 06:52:54,103 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250923T170510Z_Player_1f900_last.log
+2025-09-24 06:53:26,664 - INFO - Roblox is open.
+2025-09-24 06:53:31,667 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250923T170510Z_Player_1f900_last.log
+2025-09-24 16:45:31,810 - INFO - Roblox is open.
+2025-09-24 16:45:36,814 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250923T170510Z_Player_1f900_last.log
+2025-09-24 20:38:40,643 - INFO - Roblox is open.
+2025-09-24 20:38:45,659 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.691.0.6910867_20250924T171833Z_Player_2e922_last.log
+2025-09-25 20:34:03,383 - INFO - Roblox is open.
+2025-09-25 20:34:08,387 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250925T180919Z_Player_dfa20_last.log
+2025-09-26 21:06:00,462 - INFO - Roblox is open.
+2025-09-26 21:06:05,475 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250926T200211Z_Player_ff577_last.log
+2025-09-27 07:02:53,501 - INFO - Roblox is open.
+2025-09-27 07:02:58,514 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250926T200211Z_Player_ff577_last.log
+2025-09-27 11:12:10,505 - INFO - Roblox is open.
+2025-09-27 11:12:15,511 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250927T065314Z_Player_4917e_last.log
+2025-09-27 14:49:42,614 - INFO - Roblox is open.
+2025-09-27 14:49:47,623 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250927T065314Z_Player_4917e_last.log
+2025-09-27 22:02:55,703 - INFO - Roblox is open.
+2025-09-27 22:03:00,713 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250927T160320Z_Player_24e17_last.log
+2025-09-28 20:05:13,685 - INFO - Roblox is open.
+2025-09-28 20:05:18,705 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250928T171604Z_Player_9eb3f_last.log
+2025-09-30 06:31:51,165 - INFO - Roblox is open.
+2025-09-30 06:31:56,292 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250928T171604Z_Player_9eb3f_last.log
+2025-09-30 22:04:59,671 - INFO - Roblox is open.
+2025-09-30 22:05:04,679 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20250928T171604Z_Player_9eb3f_last.log
+2025-10-01 03:40:20,092 - ERROR - Webhook status code 503: {"message": "503: Service Unavailable", "code": 0}
+2025-10-01 20:20:22,006 - INFO - Roblox is open.
+2025-10-01 20:20:27,017 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.692.0.6920844_20251001T154154Z_Player_ef07e_last.log
+2025-10-02 15:50:54,425 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.693.0.6930961_20251002T145051Z_Player_ebebb_last.log
+2025-10-02 21:15:51,433 - INFO - Roblox is open.
+2025-10-02 21:15:56,442 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.693.0.6930961_20251002T145051Z_Player_ebebb_last.log
+2025-10-03 01:01:01,665 - ERROR - Webhook status code 503: upstream connect error or disconnect/reset before headers. reset reason: remote connection failure, transport failure reason: immediate connect error: Connection refused
+2025-10-03 01:57:28,314 - ERROR - Webhook status code 503: upstream connect error or disconnect/reset before headers. reset reason: connection termination
+2025-10-04 00:11:28,918 - INFO - Roblox is open.
+2025-10-04 00:11:33,926 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.693.0.6930961_20251003T185359Z_Player_db2db_last.log
+2025-10-04 22:42:14,068 - INFO - Roblox is open.
+2025-10-04 22:42:19,079 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.693.0.6930961_20251004T180908Z_Player_53911_last.log
+2025-10-05 21:59:00,588 - INFO - Roblox is open.
+2025-10-05 21:59:06,444 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.693.0.6930961_20251004T180908Z_Player_53911_last.log
+2025-10-06 04:04:54,744 - ERROR - Webhook status code 503: upstream connect error or disconnect/reset before headers. reset reason: connection termination
+2025-10-06 21:15:40,870 - INFO - Roblox is open.
+2025-10-06 21:15:45,884 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.693.0.6930961_20251006T164655Z_Player_52e77_last.log
+2025-10-07 21:53:10,097 - INFO - Roblox is open.
+2025-10-07 21:53:15,112 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.693.0.6930961_20251007T174147Z_Player_c27fa_last.log
+2025-10-08 22:12:04,354 - INFO - Roblox is open.
+2025-10-08 22:12:09,359 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251008T202620Z_Player_a76d7_last.log
+2025-10-08 22:13:17,706 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251008T202620Z_Player_a76d7_last.log
+2025-10-08 22:13:48,609 - INFO - Roblox is open.
+2025-10-08 22:13:53,615 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251008T202620Z_Player_a76d7_last.log
+2025-10-08 22:14:24,673 - INFO - Roblox is open.
+2025-10-08 22:14:29,678 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251008T202620Z_Player_a76d7_last.log
+2025-10-08 22:15:23,814 - INFO - Roblox is open.
+2025-10-08 22:15:28,818 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251008T202620Z_Player_a76d7_last.log
+2025-10-08 22:19:20,898 - INFO - Roblox is open.
+2025-10-08 22:19:30,510 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251008T211847Z_Player_a3f84_last.log
+2025-10-09 23:37:38,487 - INFO - Roblox is open.
+2025-10-09 23:37:43,497 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251009T214245Z_Player_a3695_last.log
+2025-10-11 00:12:45,896 - INFO - Roblox is open.
+2025-10-11 00:12:50,908 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251009T214245Z_Player_a3695_last.log
+2025-10-11 00:13:19,053 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251010T231314Z_Player_1bcfa_last.log
+2025-10-11 00:13:55,769 - INFO - Using log file: /Users/sxla/Library/Logs/Roblox/0.694.0.6940982_20251010T231351Z_Player_9c42b_last.log
+2025-10-11 01:06:34,611 - ERROR - Webhook status code 500: {"message": "500: Internal Server Error", "code": 0}
+2025-12-12 18:02:28,595 - INFO - Config file not found, creating one...
+2025-12-12 18:07:57,048 - ERROR - Webhook status code 401: {"message": "Invalid Webhook Token", "code": 50027}
+2026-01-18 00:07:26,104 - ERROR - Webhook status code 503: upstream connect error or disconnect/reset before headers. reset reason: connection termination
+2026-01-20 18:32:39,293 - INFO - Config file not found, creating one...
+2026-01-30 23:07:51,542 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:09:51,635 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:17:14,117 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:19:14,283 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:21:41,704 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:23:41,602 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:24:26,187 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:26:26,389 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:26:27,513 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:37:17,296 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:43:32,423 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:45:32,181 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:47:08,606 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:49:08,633 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:50:14,796 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:52:14,797 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-30 23:57:40,619 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:08:30,635 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:09:04,249 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:11:04,306 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:13:32,514 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:24:22,494 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:25:30,646 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:27:30,597 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:28:36,678 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:31:42,176 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:34:26,786 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:36:26,586 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:37:11,457 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:39:11,404 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:43:24,008 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:45:24,143 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:48:23,773 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:50:23,934 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:50:44,034 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:52:44,077 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:52:46,930 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:54:47,011 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:55:53,051 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 00:57:53,197 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:04:47,655 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:06:47,529 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:09:40,314 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:20:30,445 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:20:35,526 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:22:35,420 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:26:35,026 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:28:35,084 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:29:57,331 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:40:47,453 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:42:15,744 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:44:15,735 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:45:30,012 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:47:30,024 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:47:54,411 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:49:54,363 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:52:30,860 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:54:30,868 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 01:58:59,083 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:09:49,067 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:16:49,012 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:18:48,884 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:23:48,595 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:25:48,580 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:26:56,722 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:28:56,818 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:31:07,833 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:41:57,857 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:42:12,052 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:44:12,273 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:45:23,196 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:47:23,185 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:47:32,317 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:49:32,223 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 02:49:58,864 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:00:48,853 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:02:01,977 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:04:01,950 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:05:00,911 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:07:01,010 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:07:35,463 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:09:35,399 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:12:26,265 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:23:16,272 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:26:21,030 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:28:21,081 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:28:55,732 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:30:55,642 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:34:26,165 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:36:26,238 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:37:20,133 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:39:20,143 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:39:44,561 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:50:34,536 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:52:30,250 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:54:30,327 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 03:59:28,019 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:01:27,882 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:02:35,814 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:13:25,982 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:15:08,516 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:17:08,523 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:23:39,809 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:25:39,679 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:27:03,250 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:29:03,272 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:29:05,172 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:31:05,218 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:31:19,558 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:42:09,448 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:45:59,001 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:47:59,148 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:51:38,572 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:53:38,725 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 04:54:01,957 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:04:52,257 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:10:48,788 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:12:48,652 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:14:36,523 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:16:36,465 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:17:59,904 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:19:59,821 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:21:20,253 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:23:20,140 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:26:15,127 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:28:15,142 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:33:05,770 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:35:05,847 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:38:51,405 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:40:51,509 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:42:53,523 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:44:53,460 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:45:36,211 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 05:56:42,206 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:00:26,880 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:02:26,815 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:05:30,741 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:07:30,828 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:14:01,015 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:24:51,002 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:31:23,353 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:33:23,278 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:34:28,173 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:36:28,368 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:37:16,038 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:39:15,922 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:42:12,787 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:44:12,885 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:44:26,019 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:46:26,113 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:47:32,120 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:49:32,062 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:49:54,331 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:51:54,430 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:53:51,112 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:55:51,176 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 06:59:09,223 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:01:09,343 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:04:48,796 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:06:48,730 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:15:30,209 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:17:30,148 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:17:58,715 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:19:58,634 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:20:28,259 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:22:28,270 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:27:10,683 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:29:10,822 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:29:26,989 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:31:27,883 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:53:25,791 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:55:23,224 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:55:34,592 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:57:34,539 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 07:58:24,293 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 08:00:49,561 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 08:01:22,034 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 08:03:19,781 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 08:04:48,211 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 08:06:48,151 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 08:09:14,082 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-01-31 22:12:32,030 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 10:59:51,206 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:00:08,913 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:00:13,102 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:04:11,129 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:05:42,512 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:07:42,472 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:08:12,772 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:10:12,768 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:12:22,997 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:14:22,949 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:16:42,568 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:18:42,699 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:20:13,159 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:20:27,680 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:22:27,718 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:22:56,221 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:24:35,093 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:26:03,364 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:28:02,519 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:28:05,564 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:30:05,494 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:31:21,727 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:33:21,755 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:33:29,887 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:35:29,944 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:35:34,858 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:37:34,852 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:40:46,794 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:42:46,637 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:44:59,785 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:46:59,960 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:50:52,648 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:52:52,506 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 11:55:00,489 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:01:06,059 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:03:06,045 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:06:51,628 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:08:51,528 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:10:44,274 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:12:44,423 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:13:47,309 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:15:47,384 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:16:43,373 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:18:43,140 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:19:10,514 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:21:10,649 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:21:25,213 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:23:25,239 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:25:51,646 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:27:51,565 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:29:07,731 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:31:07,719 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:32:29,895 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:41:44,389 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:43:44,304 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:44:34,160 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:46:34,194 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:47:42,201 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:49:42,128 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-01 12:54:38,979 - ERROR - Webhook status code 404: {"message": "Unknown Webhook", "code": 10015}
+2026-02-24 20:13:22,584 - INFO - Config file not found, creating one...
