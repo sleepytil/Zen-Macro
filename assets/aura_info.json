@@ -83,6 +83,7 @@
     "Arcane": {"rarity": 1000000},
     ":Flushed:_Troll": {"rarity": 1000000},
     "Starlight_Kunzite": {"rarity": 1000000},
+    "Gothic": {"rarity": 1000001},
     "Magnetic_Reverse Polarity": {"rarity": 1024000},
     "Undefined": {"rarity": 1111000},
     "Rage_Brawler": {"rarity": 1280000},
@@ -232,5 +233,9 @@
     "Dream_Traveler": {"rarity": 2025812825},
     "EQUINOX": {"rarity": 2500000000},
     "MONARCH": {"rarity": 3000000000},
-    "Sailor_Admiral": {"rarity": 540000000}
+    "Sailor_Admiral": {"rarity": 540000000},
+    "Matrix_Steampunk": {"rarity": 536870912, "craftable": true},
+    "Atlas_A.T.L.A.S.": {"rarity": 470000000, "craftable": true},
+    "Chromatic_Hyper": {"rarity": 35000000, "craftable": true},
+    "Eclipse": {"rarity": 30000, "craftable": true}
 }
