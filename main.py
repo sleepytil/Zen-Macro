@@ -587,20 +587,22 @@ class macroActivity(customtkinter.CTk):
             icon_url = "https://sleepytil.github.io/images/zenicon.png"
             current_utc_time = str(datetime.datetime.now(datetime.timezone.utc))
             embed = {}
+            fAura = aura.replace("_", " : ")
             if aura in self.auraRarities:
                 rarity = self.auraRarities[aura]["rarity"]
                 fRarity = f"{rarity:,}"
                 if self.auraRarities[aura]["craftable"] == True:
                     fRarity += " [**CRAFTED**]"
+                
                 embed = {
-                    "description": f"> ### Aura Equipped - {aura}\n> **Rarity**: 1 in {fRarity}",
+                    "description": f"> ### Aura Equipped - {fAura}\n> **Rarity**: 1 in {fRarity}",
                     "color": 0xffffff,
                     "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
                     "timestamp": current_utc_time
                 }
             else:
                 embed = {
-                    "description": f"> ### Aura Equipped - {aura}",
+                    "description": f"> ### Aura Equipped - {fAura}",
                     "color": 0xffffff,
                     "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
                     "timestamp": current_utc_time
