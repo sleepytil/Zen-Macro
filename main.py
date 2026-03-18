@@ -1,4 +1,5 @@
-# Zen - ALPHA
+# Zen Macro
+# sleepytil, 2025-2026
 
 import customtkinter
 import os
@@ -50,6 +51,7 @@ class macroActivity(customtkinter.CTk):
         webhook_urls_string = customtkinter.StringVar(self, self.config['Webhook']['multi_webhook_urls'])
         self.webhook_urls = webhook_urls_string.get().split()
         self.totalBiomesFound = int(self.config['Stats']['total_biomes_discovered'])
+        self.auraRarities = self.loadAuraInfo()
 
         # Variables
         self.started = False
@@ -194,15 +196,28 @@ class macroActivity(customtkinter.CTk):
             except:
                 pass
         return "RobloxPlayer" in processes
+    
+    def loadAuraInfo(self):
+        url = "https://raw.githubusercontent.com/sleepytil/Zen-Macro/refs/heads/main/assets/aura_info.json"
+        try:
+            r = requests.get(url, timeout=10)
+            r.raise_for_status()
+            data = r.json()
+            if isinstance(data, dict):
+                return data
+            return {}
+        except Exception as e:
+            print(f"Error loading aura info: {e}")
+            return {}
 
     def startMacro(self):
         if self.started: return
         embed = discord_webhook.DiscordEmbed(description="> ### Macro Started\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
                                              color="00FF00")
         if self.multi_webhook.get() != "1":
-            embed.set_description("> **Macro Started**\n> 1 webhook active\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV")
+            embed.set_description("> ### **Macro Started**\n> **Webhooks Active**: 1\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV")
         else:
-            embed.set_description(f"> **Macro Started**\n> {len(self.webhook_urls)} webhooks active\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV")
+            embed.set_description(f"> ### **Macro Started**\n> **Webhooks Active**: {len(self.webhook_urls)}\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV")
         embed.set_footer("Zen (v2.1 Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
         embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/tilpfp.jpg")
         embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
@@ -550,7 +565,7 @@ class macroActivity(customtkinter.CTk):
             print(e, "- Error taking/sending ingame screenshot")
     
     def load_notice_tab(self):
-        url = "https://raw.githubusercontent.com/sleepytil/Zen-Macro/refs/heads/main/notice_tab.txt"
+        url = "https://raw.githubusercontent.com/sleepytil/Zen-Macro/refs/heads/main/assets/notice_tab.txt"
         data = ""
         try:
             r = requests.get(url, timeout=10)
@@ -571,12 +586,23 @@ class macroActivity(customtkinter.CTk):
             content = ""
             icon_url = "https://sleepytil.github.io/images/zenicon.png"
             current_utc_time = str(datetime.datetime.now(datetime.timezone.utc))
-            embed = {
-                "description": f"> ### Aura Equipped - {aura}",
-                "color": 0xffffff,
-                "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
-                "timestamp": current_utc_time
-            }
+            embed = {}
+            if aura in self.auraRarities:
+                rarity = self.auraRarities[aura]["rarity"]
+                fRarity = f"{rarity:,}"
+                embed = {
+                    "description": f"> ### Aura Equipped - {aura}\n> **Rarity**: 1 in {fRarity}",
+                    "color": 0xffffff,
+                    "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
+                    "timestamp": current_utc_time
+                }
+            else:
+                embed = {
+                    "description": f"> ### Aura Equipped - {aura}",
+                    "color": 0xffffff,
+                    "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
+                    "timestamp": current_utc_time
+                }
             if self.multi_webhook.get() != "1":
                 if "discord.com" in self.webhookURL.get() and "https://" in self.webhookURL.get():
                     try:
