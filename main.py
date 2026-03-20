@@ -598,10 +598,23 @@ class macroActivity(customtkinter.CTk):
                         pass
                 except Exception:
                     pass
-                
+                embedColour = 0xffffff
+                if rarity >= 999999999:
+                    embedColour = 0x7fffd4
+                elif rarity >= 99999999:
+                    embedColour = 0xff2c2c
+                elif rarity >= 9999999:
+                    embedColour = 0x00008b
+                elif rarity >= 999999:
+                    embedColour = 0xff69b4
+                else:
+                    embedColour = 0xffffff
+
+
+
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}\n> **Rarity**: 1 in {fRarity}",
-                    "color": 0xffffff,
+                    "color": embedColour,
                     "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
                     "timestamp": current_utc_time
                 }
