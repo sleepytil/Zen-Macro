@@ -600,6 +600,34 @@ class macroActivity(customtkinter.CTk):
                     "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
                     "timestamp": current_utc_time
                 }
+                if self.multi_webhook.get() != "1":
+                    if "discord.com" in self.webhookURL.get() and "https://" in self.webhookURL.get():
+                        try:
+                            embed_copy = dict(embed)
+                            embed_copy["image"] = {"url": f"attachment://{os.path.basename(filename)}"}
+                            with open(filename, "rb") as image_file:
+                                files = {"file": (os.path.basename(filename), image_file, "image/png")}
+                                data = {"payload_json": json.dumps({"content": content, "embeds": [embed_copy]})}
+                                requests.post(self.webhookURL.get(), data=data, files=files, timeout=10)
+                        except Exception as e:
+                            try:
+                                print(f"Failed to send aura screenshot to {self.webhookURL.get()}: {e}")
+                            except Exception:
+                                pass
+                else:
+                    for url in self.webhook_urls:
+                        try:
+                            embed_copy = dict(embed)
+                            embed_copy["image"] = {"url": f"attachment://{os.path.basename(filename)}"}
+                            with open(filename, "rb") as image_file:
+                                files = {"file": (os.path.basename(filename), image_file, "image/png")}
+                                data = {"payload_json": json.dumps({"content": content, "embeds": [embed_copy]})}
+                                requests.post(url, data=data, files=files, timeout=10)
+                        except Exception as e:
+                            try:
+                                print(f"Failed to send aura screenshot to {url}: {e}")
+                            except Exception:
+                                pass
             else:
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}",
@@ -607,34 +635,34 @@ class macroActivity(customtkinter.CTk):
                     "footer": {"text": "Zen (v2.1 Beta)", "icon_url": icon_url},
                     "timestamp": current_utc_time
                 }
-            if self.multi_webhook.get() != "1":
-                if "discord.com" in self.webhookURL.get() and "https://" in self.webhookURL.get():
-                    try:
-                        embed_copy = dict(embed)
-                        embed_copy["image"] = {"url": f"attachment://{os.path.basename(filename)}"}
-                        with open(filename, "rb") as image_file:
-                            files = {"file": (os.path.basename(filename), image_file, "image/png")}
-                            data = {"payload_json": json.dumps({"content": content, "embeds": [embed_copy]})}
-                            requests.post(self.webhookURL.get(), data=data, files=files, timeout=10)
-                    except Exception as e:
+                if self.multi_webhook.get() != "1":
+                    if "discord.com" in self.webhookURL.get() and "https://" in self.webhookURL.get():
                         try:
-                            print(f"Failed to send aura screenshot to {self.webhookURL.get()}: {e}")
-                        except Exception:
-                            pass
-            else:
-                for url in self.webhook_urls:
-                    try:
-                        embed_copy = dict(embed)
-                        embed_copy["image"] = {"url": f"attachment://{os.path.basename(filename)}"}
-                        with open(filename, "rb") as image_file:
-                            files = {"file": (os.path.basename(filename), image_file, "image/png")}
-                            data = {"payload_json": json.dumps({"content": content, "embeds": [embed_copy]})}
-                            requests.post(url, data=data, files=files, timeout=10)
-                    except Exception as e:
+                            embed_copy = dict(embed)
+                            embed_copy["image"] = {"url": f"attachment://{os.path.basename(filename)}"}
+                            with open(filename, "rb") as image_file:
+                                files = {"file": (os.path.basename(filename), image_file, "image/png")}
+                                data = {"payload_json": json.dumps({"content": content, "embeds": [embed_copy]})}
+                                requests.post(self.webhookURL.get(), data=data, files=files, timeout=10)
+                        except Exception as e:
+                            try:
+                                print(f"Failed to send aura screenshot to {self.webhookURL.get()}: {e}")
+                            except Exception:
+                                pass
+                else:
+                    for url in self.webhook_urls:
                         try:
-                            print(f"Failed to send aura screenshot to {url}: {e}")
-                        except Exception:
-                            pass
+                            embed_copy = dict(embed)
+                            embed_copy["image"] = {"url": f"attachment://{os.path.basename(filename)}"}
+                            with open(filename, "rb") as image_file:
+                                files = {"file": (os.path.basename(filename), image_file, "image/png")}
+                                data = {"payload_json": json.dumps({"content": content, "embeds": [embed_copy]})}
+                                requests.post(url, data=data, files=files, timeout=10)
+                        except Exception as e:
+                            try:
+                                print(f"Failed to send aura screenshot to {url}: {e}")
+                            except Exception:
+                                pass
         except Exception as e: 
             print(e, "- Error taking/sending ingame screenshot")
 
