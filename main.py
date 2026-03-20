@@ -591,8 +591,13 @@ class macroActivity(customtkinter.CTk):
             if aura in self.auraRarities:
                 rarity = self.auraRarities[aura]["rarity"]
                 fRarity = f"{rarity:,}"
-                if self.auraRarities[aura]["craftable"] == True:
-                    fRarity += " [**CRAFTED**]"
+                try:
+                    if self.auraRarities[aura]["craftable"] == True:
+                        fRarity += " [**CRAFTED**]"
+                    else:
+                        pass
+                except Exception:
+                    pass
                 
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}\n> **Rarity**: 1 in {fRarity}",
