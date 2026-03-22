@@ -219,7 +219,7 @@ class macroActivity(customtkinter.CTk):
         else:
             embed.set_description(f"> ### **Macro Started**\n> **Webhooks Active**: {len(self.webhook_urls)}\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV")
         embed.set_footer("Zen (v2.1 Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
-        embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/tilpfp.jpg")
+        embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostart.png")
         embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
         if self.multi_webhook.get() != "1":
             if "discord.com" not in self.webhookURL.get() or "https://" not in self.webhookURL.get():
@@ -499,7 +499,7 @@ class macroActivity(customtkinter.CTk):
                     ending_embed = discord_webhook.DiscordEmbed(description="> ### Macro Stopped\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
                                                                 color="FF0000")
                     ending_embed.set_footer("Zen (v2.1 Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
-                    ending_embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/tilpfp.jpg")
+                    ending_embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostop.png")
                     ending_embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                     ending_webhook.add_embed(ending_embed)
                     ending_webhook.execute()
@@ -508,7 +508,7 @@ class macroActivity(customtkinter.CTk):
                 ending_embed = discord_webhook.DiscordEmbed(description="> ### Macro Stopped\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
                                                             color="FF0000")
                 ending_embed.set_footer("Zen (v2.1 Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
-                ending_embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/tilpfp.jpg")
+                ending_embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostop.png")
                 ending_embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                 for url in self.webhook_urls:
                     ending_webhook = discord_webhook.DiscordWebhook(url=url)
