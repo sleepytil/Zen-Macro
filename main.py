@@ -1,4 +1,4 @@
-# Zen Macro
+# Zen Macro (MacOS)
 # sleepytil, 2025-2026
 
 import customtkinter
