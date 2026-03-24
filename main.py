@@ -38,7 +38,7 @@ class macroActivity(customtkinter.CTk):
         if not os.path.exists(self.config_name):
             self.logger.info("Config file not found, creating one...")
             print("[DEBUG] Config file not found, creating one...")
-            self.config['Webhook'] = {'webhook_url': "", 'private_server': "",  'multi_webhook': "0", 'multi_webhook_urls': ""}
+            self.config['Webhook'] = {'webhook_url': "", 'private_server': "",  'multi_webhook': "0", 'multi_webhook_urls': "", 'discord_user_id': ""}
             self.config['Macro'] = {'aura_detection': "0", 'last_roblox_version': ""}
             self.config['Stats'] = {'total_biomes_discovered': "0"}
             with open(self.config_name, 'w') as configfile:
@@ -46,6 +46,7 @@ class macroActivity(customtkinter.CTk):
         self.config.read(self.config_name)
         self.webhookURL = customtkinter.StringVar(self, self.config['Webhook']['webhook_url'])
         self.psURL = customtkinter.StringVar(self, self.config['Webhook']['private_server'])
+        self.userID = customtkinter.StringVar(self, self.config['Webhook']['discord_user_id']) or ""
         self.multi_webhook = customtkinter.StringVar(self, self.config['Webhook']['multi_webhook'])
         self.aura_detection = customtkinter.IntVar(self, int(self.config['Macro']['aura_detection']))
         webhook_urls_string = customtkinter.StringVar(self, self.config['Webhook']['multi_webhook_urls'])
@@ -161,6 +162,14 @@ class macroActivity(customtkinter.CTk):
         ps_field = customtkinter.CTkEntry(tabview.tab("Webhook"), font=customtkinter.CTkFont(family="Segoe UI", size=20),
                                   width=470, textvariable=self.psURL)
         ps_field.grid(row=1, column=1, padx=(181, 0), pady=(23, 0), sticky="w")
+
+        userid_label = customtkinter.CTkLabel(tabview.tab("Webhook"), text="Discord User ID:",
+                                  font=customtkinter.CTkFont(family="Segoe UI", size=20))
+        userid_label.grid(column=0, row=2, padx=(10, 0), pady=(20, 0), columnspan=2, sticky="w")
+
+        userid_field = customtkinter.CTkEntry(tabview.tab("Webhook"), font=customtkinter.CTkFont(family="Segoe UI", size=20),
+                                  width=470, textvariable=self.userID)
+        userid_field.grid(row=2, column=1, padx=(181, 0), pady=(23, 0), sticky="w")
 
         detection_toggle = customtkinter.CTkCheckBox(tabview.tab("Config"), text="Aura Detection",
                                              font=customtkinter.CTkFont(family="Segoe UI", size=20),
@@ -487,6 +496,7 @@ class macroActivity(customtkinter.CTk):
         # write config data
         self.config.set('Webhook', 'webhook_url', self.webhookURL.get())
         self.config.set('Webhook', 'private_server', self.psURL.get())
+        self.config.set('Webhook', 'discord_user_id', self.userID.get())
         self.config.set('Stats', 'total_biomes_discovered', str(self.totalBiomesFound))
         with open(self.config_name, 'w+') as configfile:
             self.config.write(configfile)
@@ -583,11 +593,13 @@ class macroActivity(customtkinter.CTk):
             filename = os.path.join("images", f"screenshot_{int(time.time())}.png")
             img = pyautogui.screenshot()
             img.save(filename)
-            content = ""
             icon_url = "https://sleepytil.github.io/images/zenicon.png"
             current_utc_time = str(datetime.datetime.now(datetime.timezone.utc))
             embed = {}
             fAura = aura.replace("_", " : ")
+            content = ""
+            if self.userID.get() != None and self.userID.get() != "":
+                content = f"<@{self.userID.get()}>"
             if aura in self.auraRarities:
                 rarity = self.auraRarities[aura]["rarity"]
                 fRarity = f"{rarity:,}"
