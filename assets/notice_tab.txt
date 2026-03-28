@@ -1,10 +1,7 @@
-Zen Macro (v2.0)
+Zen Macro (v2.1)
 Changelogs:
-- Revamped UI
-- Added the screenshot function (to use, run this in terminal: pip3 install pyautogui)
-- Revamped Embeds (also added new functionality with them)
-- Rare Biome Screenshots
-- Webhook Activity Info
-
-Eventually, the macro will release on Windows.
-For now, enjoy functionality for Mac users!
+- Added new icon
+- Added aura rarity detection functionality
+- Added aura pings depending on the rarity
+- Added new assets
+- Changed some UI
