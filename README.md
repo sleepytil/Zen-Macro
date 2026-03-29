@@ -2,19 +2,19 @@
 <h1><img src="zen.png" height="30px">  Zen</h1>
 <p> A Sol's RNG Macro to track Biomes, Merchants and Auras.<br>I am building off of maxstellar's Biome Macro for Mac.</p>
 
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/cm3t/Zen-Macro/total)
-![GitHub Release](https://img.shields.io/github/v/release/cm3t/Zen-Macro)
-![GitHub License](https://img.shields.io/github/license/cm3t/Zen-Macro)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/sleepytil/Zen-Macro/total)
+![GitHub Release](https://img.shields.io/github/v/release/sleepytil/Zen-Macro)
+![GitHub License](https://img.shields.io/github/license/sleepytil/Zen-Macro)
 
-# How to install?
-Go to **https://www.python.org/** and install the latest version of Python.
-Then, open a console and navigate to the macro folder you just unzipped from the ZIP you downloaded.
+# Installation
+Download the latest release and, after downloading, open the `.dmg` file.
+Move the 'Zen Macro' application into the Applications folder, and open it **from that folder**.
+You could also open it through Launchpad, Spotlight or any other way to open apps from your Applications folder.
+Then you are all set.
 
-Once there, type the following into your terminal:
-`pip3 install -r requirements.txt`
-
-If that doesn't work, try:
-`pip install -r requirements.txt`
+**If you run into an error such as: Apple could not verify Zen Macro is free of malware that may harm your Mac or compromise your privacy.**
+Follow this tutorial: https://www.youtube.com/shorts/scdAMJDGJvA
+Then you should be able to open the macro fine.
 
 # Credits
 - sleepytil (Actively developing the macro)
