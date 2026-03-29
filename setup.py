@@ -6,6 +6,8 @@ DATA_FILES = []
 OPTIONS = {
     'argv_emulation': False,
     'iconfile': 'zen.icns',
+    'resources': ['images', 'sleepytil.png'],
+    'excludes': ['rubicon'],
     }
 
 setup(
