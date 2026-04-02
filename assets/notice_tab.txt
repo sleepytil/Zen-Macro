@@ -1,6 +1,5 @@
-[AURA DETECTION UPDATE - 29th March]
-Added 12 auras to detection: Kawaii, Starborn, Celestial : Eclipse, Hatchwarden, 
-Emperor, Eggsistance, REVIVE, Eggore, Eostre, Eggis, Y.O.L.K.E.G.G. and Sky Festival
+[AURA DETECTION UPDATE - 2nd April]
+Added the April Fools 2026 auras to detection.
 
 Zen Macro (v2.1) - 28th March
 Changelogs:
