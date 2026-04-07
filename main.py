@@ -214,6 +214,15 @@ class macroActivity(customtkinter.CTk):
         """.format(message=message, title=title)
 
         subprocess.call("osascript -e '{}'".format(applescript), shell=True)
+    
+    def write_config(self):
+        self.config.set('Webhook', 'webhook_url', self.webhookURL.get())
+        self.config.set('Webhook', 'private_server', self.psURL.get())
+        self.config.set('Webhook', 'discord_user_id', self.userID.get())
+        self.config.set('Macro', 'aura_min_rarity', self.auraMin.get())
+        self.config.set('Stats', 'total_biomes_discovered', str(self.totalBiomesFound))
+        with open(self.config_name, 'w+') as configfile:
+            self.config.write(configfile)
 
     def open_url(self, url):
         webbrowser.open(url, new=2, autoraise=True)
@@ -265,7 +274,9 @@ class macroActivity(customtkinter.CTk):
                 starting_webhook.add_embed(embed)
                 starting_webhook.execute()
         self.started = True
-
+        # write config data
+        self.write_config()
+        
         if self.robloxRunCheck():
             self.roblox_open = True
             print("Roblox is open.")
@@ -526,13 +537,7 @@ class macroActivity(customtkinter.CTk):
 
     def stop(self):
         # write config data
-        self.config.set('Webhook', 'webhook_url', self.webhookURL.get())
-        self.config.set('Webhook', 'private_server', self.psURL.get())
-        self.config.set('Webhook', 'discord_user_id', self.userID.get())
-        self.config.set('Macro', 'aura_min_rarity', self.auraMin.get())
-        self.config.set('Stats', 'total_biomes_discovered', str(self.totalBiomesFound))
-        with open(self.config_name, 'w+') as configfile:
-            self.config.write(configfile)
+        self.write_config()
 
         # end webhook
         if self.started and not self.stopped:
