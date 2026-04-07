@@ -567,11 +567,11 @@ class macroActivity(customtkinter.CTk):
         self.stopped = True
     
     def send_rare_biome_screenshot(self, biome):
+        os.makedirs("images", exist_ok=True)
+        filename = os.path.join("images", f"screenshot_{int(time.time())}.png")
+        img = pyautogui.screenshot()
+        img.save(filename)
         try:
-            os.makedirs("images", exist_ok=True)
-            filename = os.path.join("images", f"screenshot_{int(time.time())}.png")
-            img = pyautogui.screenshot()
-            img.save(filename)
             content = ""
             icon_url = "https://sleepytil.github.io/images/zenicon.png"
             current_utc_time = str(datetime.datetime.now(datetime.timezone.utc))
@@ -611,6 +611,11 @@ class macroActivity(customtkinter.CTk):
                             pass
         except Exception as e: 
             print(e, "- Error taking/sending ingame screenshot")
+        finally:
+            try:
+                os.remove(filename)
+            except Exception as e:
+                print(f"Failed to delete screenshot {filename}: {e}")
     
     def load_notice_tab(self):
         url = "https://raw.githubusercontent.com/sleepytil/Zen-Macro/refs/heads/main/assets/notice_tab.txt"
@@ -626,11 +631,11 @@ class macroActivity(customtkinter.CTk):
         return data
     
     def send_aura_screenshot(self, aura):
+        os.makedirs("images", exist_ok=True)
+        filename = os.path.join("images", f"screenshot_{int(time.time())}.png")
+        img = pyautogui.screenshot()
+        img.save(filename)
         try:
-            os.makedirs("images", exist_ok=True)
-            filename = os.path.join("images", f"screenshot_{int(time.time())}.png")
-            img = pyautogui.screenshot()
-            img.save(filename)
             icon_url = "https://sleepytil.github.io/images/zenicon.png"
             current_utc_time = str(datetime.datetime.now(datetime.timezone.utc))
             embed = {}
@@ -735,6 +740,11 @@ class macroActivity(customtkinter.CTk):
                                 pass
         except Exception as e: 
             print(e, "- Error taking/sending ingame screenshot")
+        finally:
+            try:
+                os.remove(filename)
+            except Exception as e:
+                print(f"Failed to delete screenshot {filename}: {e}")
 
 
 root = macroActivity()
