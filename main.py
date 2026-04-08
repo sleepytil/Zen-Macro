@@ -152,7 +152,7 @@ class macroActivity(customtkinter.CTk):
                                        command=self.stop)
         stop_button.grid(row=1, column=1, padx=(10, 0), pady=(10, 0), sticky="w")
 
-        version_label = customtkinter.CTkLabel(tabview.tab("Home"), text="Build v2.2 Dev Beta", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
+        version_label = customtkinter.CTkLabel(tabview.tab("Home"), text="Build 2.2 Private Beta", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
         version_label.grid(row=1, column=0, padx=(5, 0), sticky="nw")
 
         self.state_label = customtkinter.CTkLabel(tabview.tab("Home"), text="Macro Stopped", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
@@ -201,20 +201,20 @@ class macroActivity(customtkinter.CTk):
         detection_toggle = customtkinter.CTkCheckBox(tabview.tab("Config"), text="Aura Detection",
                                              font=customtkinter.CTkFont(family="Segoe UI", size=20),
                                              variable=self.aura_detection, command=self.auradetection_toggle_update)
-        detection_toggle.grid(row=0, column=0, columnspan=2, padx=(10, 0), pady=(10, 0), sticky="w")
+        detection_toggle.grid(row=1, column=0, columnspan=1, padx=(10, 0), pady=(10, 0), sticky="w")
 
         auramin_label = customtkinter.CTkLabel(tabview.tab("Config"), text="Minimum Ping Rarity:",
                                   font=customtkinter.CTkFont(family="Segoe UI", size=20))
-        auramin_label.grid(column=0, row=1, padx=(10, 0), pady=(20, 0), columnspan=2, sticky="w")
+        auramin_label.grid(column=0, row=2, padx=(10, 0), pady=(20, 0), columnspan=1, sticky="w")
 
         anti_afk_toggle = customtkinter.CTkCheckBox(tabview.tab("Config"), text="Anti-AFK",
                                              font=customtkinter.CTkFont(family="Segoe UI", size=20),
                                              variable=self.anti_afk, command=self.anti_afk_toggle_update)
-        anti_afk_toggle.grid(row=2, column=0, columnspan=2, padx=(10, 0), pady=(10, 0), sticky="w")
+        anti_afk_toggle.grid(row=0, column=0, columnspan=1, padx=(10, 0), pady=(10, 0), sticky="w")
 
         auramin_field = customtkinter.CTkEntry(tabview.tab("Config"), font=customtkinter.CTkFont(family="Segoe UI", size=20),
                                   width=470, textvariable=self.auraMin)
-        auramin_field.grid(row=1, column=1, padx=(200, 0), pady=(23, 0), sticky="w")
+        auramin_field.grid(row=2, column=1, padx=(8, 0), pady=(23, 0), sticky="w")
 
         total_biomes_label = customtkinter.CTkLabel(tabview.tab("Stats"), text="Total Biomes Found:",
                                        font=customtkinter.CTkFont(family="Segoe UI", size=20))
@@ -276,7 +276,7 @@ class macroActivity(customtkinter.CTk):
             embed.set_description("> ### **Macro Started**\n> **Webhooks Active**: 1\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV")
         else:
             embed.set_description(f"> ### **Macro Started**\n> **Webhooks Active**: {len(self.webhook_urls)}\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV")
-        embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+        embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
         embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostart.png")
         embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
         if self.multi_webhook.get() != "1":
@@ -407,7 +407,7 @@ class macroActivity(customtkinter.CTk):
                                                 print(time.strftime('%H:%M:%S') + f": Biome Ended - " + last_event)
                                                 embed = discord_webhook.DiscordEmbed(description=f"> ### Biome Ended - {last_event}",
                                                                                 color=event_biome_colour)
-                                                embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                                                embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                                                 embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                                                 webhook.add_embed(embed)
                                                 webhook.execute()
@@ -433,7 +433,7 @@ class macroActivity(customtkinter.CTk):
                                             else:
                                                 embed.set_description(f"> ### Biome Started - {event}\n[Join Private Server]({self.psURL.get()})")
                                             
-                                            embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                                            embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                                             embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                                             embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/" + event.replace(" ", "%20") + ".png")
                                             webhook.add_embed(embed)
@@ -456,7 +456,7 @@ class macroActivity(customtkinter.CTk):
                                                     webhook = discord_webhook.DiscordWebhook(url=url)
                                                     embed = discord_webhook.DiscordEmbed(description=f"> ### Biome Ended - {last_event}",
                                                                                 color=event_biome_colour)
-                                                    embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                                                    embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                                                     embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                                                     webhook.add_embed(embed)
                                                     webhook.execute()
@@ -484,7 +484,7 @@ class macroActivity(customtkinter.CTk):
                                                     embed.set_description(f"> ### Biome Started - {event}\n[Join Private Server]({self.psURL.get()})\n-# Ends {biomeEndTimeFormatted}")
                                                 else:
                                                     embed.set_description(f"> ### Biome Started - {event}\n[Join Private Server]({self.psURL.get()})")
-                                                embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                                                embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                                                 embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                                                 embed.set_thumbnail(url="https://sleepytil.github.io/biome_thumb/" + event.replace(" ", "%20") + ".png")
                                                 webhook = discord_webhook.DiscordWebhook(url=url)
@@ -513,7 +513,7 @@ class macroActivity(customtkinter.CTk):
                     close_webhook = discord_webhook.DiscordWebhook(url=url)
                     close_embed = discord_webhook.DiscordEmbed(description=f"> ### Roblox Closed/Crashed",
                                                                color="FF0000")
-                    close_embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                    close_embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                     close_embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                     close_webhook.add_embed(close_embed)
                     close_webhook.execute()
@@ -522,7 +522,7 @@ class macroActivity(customtkinter.CTk):
                         close_webhook = discord_webhook.DiscordWebhook(url=url)
                         close_embed = discord_webhook.DiscordEmbed(description=f"> ### Roblox Closed/Crashed",
                                                                    color="FF0000")
-                        close_embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                        close_embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                         close_embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                         close_webhook.add_embed(close_embed)
                         close_webhook.execute()
@@ -554,17 +554,26 @@ class macroActivity(customtkinter.CTk):
 
     def auradetection_toggle_update(self):
         if self.aura_detection.get() == 1:
-            self.popup("This feature is EXPERIMENTAL.\nThere are many limitations with aura detection.\n\nIt detects all auras "
-                  "that get equipped, so if you equip an aura yourself, it will get detected. Additionally, it will only "
-                  "detect auras that auto-equip.\n\nIt is also incapable of detecting dupes (for example, "
-                  "rolling Celestial with Celestial already equipped) or Overture: History, for some weird reason.",
-                  "Warning")
+            self.popup("You are about to be prompted to enable screen recording permissions for this application.\nThis is required for aura detection to work, "
+                  "as the macro will screenshot the game to show what aura was equipped.\n\nAfter enabling permissions, you will need to restart the macro.",
+                  "Aura Detection")
+            os.makedirs("images", exist_ok=True)
+            filename = os.path.join("images", f"screenshot_{int(time.time())}.png")
+            img = pyautogui.screenshot()
+            img.save(filename)
+            try:
+                os.remove(filename)
+            except Exception as e:
+                print(f"Failed to delete screenshot {filename}: {e}")
         self.config.set('Macro', 'aura_detection', str(self.aura_detection.get()))
         with open(self.config_path, 'w+') as configfile:
             self.config.write(configfile)
     
     def anti_afk_toggle_update(self):
         if self.anti_afk.get() == 1:
+            self.popup("You are about to be prompted to enable accessibility permissions for this application.\nThis is required for the anti-AFK feature to work, "
+                  "as the macro will initiate keystrokes to ensure you don't disconnect.\n\nAfter enabling permissions, you will need to restart the macro.",
+                  "Aura Detection")
             pyautogui.press("space")
         self.config.set('Macro', 'anti_afk', str(self.anti_afk.get()))
         with open(self.config_path, 'w+') as configfile:
@@ -581,7 +590,7 @@ class macroActivity(customtkinter.CTk):
                     ending_webhook = discord_webhook.DiscordWebhook(url=self.webhookURL.get())
                     ending_embed = discord_webhook.DiscordEmbed(description="> ### Macro Stopped\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
                                                                 color="FF0000")
-                    ending_embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                    ending_embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                     ending_embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostop.png")
                     ending_embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                     ending_webhook.add_embed(ending_embed)
@@ -590,7 +599,7 @@ class macroActivity(customtkinter.CTk):
             else:
                 ending_embed = discord_webhook.DiscordEmbed(description="> ### Macro Stopped\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
                                                             color="FF0000")
-                ending_embed.set_footer("Zen (v2.2 Dev Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
+                ending_embed.set_footer("Zen (2.2 Private Beta)", icon_url="https://sleepytil.github.io/images/zenicon.png")
                 ending_embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostop.png")
                 ending_embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
                 for url in self.webhook_urls:
@@ -613,7 +622,7 @@ class macroActivity(customtkinter.CTk):
             embed = {
                 "description": f"> ### Biome Screenshot - {biome}",
                 "color": 0xffffff,
-                "footer": {"text": "Zen (v2.2 Dev Beta)", "icon_url": icon_url},
+                "footer": {"text": "Zen (2.2 Private Beta)", "icon_url": icon_url},
                 "timestamp": current_utc_time
             }
             if self.multi_webhook.get() != "1":
@@ -707,7 +716,7 @@ class macroActivity(customtkinter.CTk):
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}\n> **Rarity**: 1 in {fRarity}",
                     "color": embedColour,
-                    "footer": {"text": "Zen (v2.2 Dev Beta)", "icon_url": icon_url},
+                    "footer": {"text": "Zen (2.2 Private Beta)", "icon_url": icon_url},
                     "timestamp": current_utc_time
                 }
                 if self.multi_webhook.get() != "1":
@@ -742,7 +751,7 @@ class macroActivity(customtkinter.CTk):
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}",
                     "color": 0xffffff,
-                    "footer": {"text": "Zen (v2.2 Dev Beta)", "icon_url": icon_url},
+                    "footer": {"text": "Zen (2.2 Private Beta)", "icon_url": icon_url},
                     "timestamp": current_utc_time
                 }
                 if self.multi_webhook.get() != "1":

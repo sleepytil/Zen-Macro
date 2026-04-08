@@ -12,7 +12,7 @@ OPTIONS = {
 
 setup(
     app=APP,
-    name='Zen Macro',
+    name='Zen 2.2 Private Beta',
     data_files=DATA_FILES,
     options={'py2app': OPTIONS},
     setup_requires=['py2app'],
