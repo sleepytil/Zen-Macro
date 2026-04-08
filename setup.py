@@ -8,7 +8,13 @@ OPTIONS = {
     'iconfile': 'zen.icns',
     'resources': ['images', 'sleepytil.png'],
     'excludes': ['rubicon'],
+    'plist': {
+        'CFBundleIdentifier': 'com.sleepytil.Zen Macro',
+        'CFBundleName': 'Zen Macro',
+        'NSScreenCaptureUsageDescription': 'This app requires screen recording access.',
+        'NSAccessibilityUsageDescription': 'This app requires accessibility access.',
     }
+}
 
 setup(
     app=APP,
