@@ -32,25 +32,30 @@ class macroActivity(customtkinter.CTk):
         self.logger = logging.getLogger('mylogger')
 
         # Variables > Read Config
-        self.ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+        self.ROOT_DIR = Path.home() / "Documents" / "Zen Macro Data"
         self.config_name = 'config.ini'
+        self.ROOT_DIR.mkdir(parents=True, exist_ok=True)
+        self.config_path = self.ROOT_DIR / self.config_name
         self.config = configparser.ConfigParser()
-        if not os.path.exists(self.config_name):
+        if not os.path.exists(self.config_path):
             self.logger.info("Config file not found, creating one...")
             print("[DEBUG] Config file not found, creating one...")
             self.config['Webhook'] = {'webhook_url': "", 'private_server': "",  'multi_webhook': "0", 'multi_webhook_urls': "", 'discord_user_id': ""}
-            self.config['Macro'] = {'aura_detection': "0", 'last_roblox_version': "", 'aura_min_rarity': ""}
+            self.config['Macro'] = {'aura_detection': "0", 'last_roblox_version': "", 'aura_min_rarity': "", 'anti_afk': "0"}
             self.config['Stats'] = {'total_biomes_discovered': "0"}
-            with open(self.config_name, 'w') as configfile:
+            with open(self.config_path, 'w') as configfile:
                 self.config.write(configfile)
-        self.config.read(self.config_name)
+        self.config.read(self.config_path)
         self.webhookURL = customtkinter.StringVar(self, self.config['Webhook']['webhook_url'])
         self.psURL = customtkinter.StringVar(self, self.config['Webhook']['private_server'])
+        self.totalBiomesFound = int(self.config['Stats']['total_biomes_discovered'])
         self.userID = None
         try:
             self.userID = customtkinter.StringVar(self, self.config['Webhook']['discord_user_id'])
         except Exception as e:
             print(f"Error: No Discord User ID found in config, skipping...\nDebug: {e}")
+            self.userID = customtkinter.StringVar(self, "")
+            self.write_config()
             pass
         self.multi_webhook = customtkinter.StringVar(self, self.config['Webhook']['multi_webhook'])
         self.aura_detection = customtkinter.IntVar(self, int(self.config['Macro']['aura_detection']))
@@ -59,10 +64,19 @@ class macroActivity(customtkinter.CTk):
             self.auraMin = customtkinter.StringVar(self, self.config['Macro']['aura_min_rarity'])
         except Exception as e:
             print(f"Error: No Minimum Aura Rarity found in config, skipping...\nDebug: {e}")
+            self.auraMin = customtkinter.StringVar(self, "")
+            self.write_config()
+            pass
+        self.anti_afk = 0
+        try:
+            self.anti_afk = customtkinter.IntVar(self, int(self.config['Macro']['anti_afk']))
+        except Exception as e:
+            print(f"Error: No Anti-AFK setting found in config, skipping...\nDebug: {e}")
+            self.anti_afk = customtkinter.IntVar(self, 0)
+            self.write_config()
             pass
         webhook_urls_string = customtkinter.StringVar(self, self.config['Webhook']['multi_webhook_urls'])
         self.webhook_urls = webhook_urls_string.get().split()
-        self.totalBiomesFound = int(self.config['Stats']['total_biomes_discovered'])
         self.auraRarities = self.loadAuraInfo()
 
         # Variables
@@ -193,6 +207,11 @@ class macroActivity(customtkinter.CTk):
                                   font=customtkinter.CTkFont(family="Segoe UI", size=20))
         auramin_label.grid(column=0, row=1, padx=(10, 0), pady=(20, 0), columnspan=2, sticky="w")
 
+        anti_afk_toggle = customtkinter.CTkCheckBox(tabview.tab("Config"), text="Anti-AFK",
+                                             font=customtkinter.CTkFont(family="Segoe UI", size=20),
+                                             variable=self.anti_afk, command=self.anti_afk_toggle_update)
+        anti_afk_toggle.grid(row=2, column=0, columnspan=2, padx=(10, 0), pady=(10, 0), sticky="w")
+
         auramin_field = customtkinter.CTkEntry(tabview.tab("Config"), font=customtkinter.CTkFont(family="Segoe UI", size=20),
                                   width=470, textvariable=self.auraMin)
         auramin_field.grid(row=1, column=1, padx=(200, 0), pady=(23, 0), sticky="w")
@@ -221,7 +240,7 @@ class macroActivity(customtkinter.CTk):
         self.config.set('Webhook', 'discord_user_id', self.userID.get())
         self.config.set('Macro', 'aura_min_rarity', self.auraMin.get())
         self.config.set('Stats', 'total_biomes_discovered', str(self.totalBiomesFound))
-        with open(self.config_name, 'w+') as configfile:
+        with open(self.config_path, 'w+') as configfile:
             self.config.write(configfile)
 
     def open_url(self, url):
@@ -353,10 +372,13 @@ class macroActivity(customtkinter.CTk):
             check = self.robloxRunCheck()
             if check:
                 check_index = time.time() - index
-                if check_index > 60:
+                if check_index > 150:
                     index = time.time()
-                    pyautogui.press("space")
-                    print("ANTI-AFK: Pressed space to prevent kick...")
+                    if self.anti_afk.get() == 1:
+                        pyautogui.press("space")
+                        print("ANTI-AFK: Pressed space to prevent kick...")
+                    else:
+                        print("ANTI-AFK: Not-enabled, skipping function...")
                 line = file.readline()
                 if line:
                     print(line)
@@ -538,7 +560,14 @@ class macroActivity(customtkinter.CTk):
                   "rolling Celestial with Celestial already equipped) or Overture: History, for some weird reason.",
                   "Warning")
         self.config.set('Macro', 'aura_detection', str(self.aura_detection.get()))
-        with open(self.config_name, 'w+') as configfile:
+        with open(self.config_path, 'w+') as configfile:
+            self.config.write(configfile)
+    
+    def anti_afk_toggle_update(self):
+        if self.anti_afk.get() == 1:
+            pyautogui.press("space")
+        self.config.set('Macro', 'anti_afk', str(self.anti_afk.get()))
+        with open(self.config_path, 'w+') as configfile:
             self.config.write(configfile)
 
     def stop(self):
