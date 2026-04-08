@@ -342,6 +342,7 @@ class macroActivity(customtkinter.CTk):
         last_event = None
         last_aura = None
         file.seek(0, 2)
+        index = time.time()
         while True:
             if not self.stopped:
                 self.update()
@@ -351,6 +352,11 @@ class macroActivity(customtkinter.CTk):
                 sys.exit()
             check = self.robloxRunCheck()
             if check:
+                check_index = time.time() - index
+                if check_index > 60:
+                    index = time.time()
+                    pyautogui.press("space")
+                    print("ANTI-AFK: Pressed space to prevent kick...")
                 line = file.readline()
                 if line:
                     print(line)
