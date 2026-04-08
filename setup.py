@@ -10,9 +10,7 @@ OPTIONS = {
     'excludes': ['rubicon'],
     'plist': {
         'CFBundleIdentifier': 'com.sleepytil.Zen Macro',
-        'CFBundleName': 'Zen Macro',
-        'NSScreenCaptureUsageDescription': 'This app requires screen recording access.',
-        'NSAccessibilityUsageDescription': 'This app requires accessibility access.',
+        'CFBundleName': 'Zen Macro'
     }
 }
 
