@@ -27,6 +27,20 @@ jobs:
           pip install py2app
           pip install -r requirements.txt
           npm install --global create-dmg
+        
+      - name: Import signing certificate
+        env:
+          MACOS_CERTIFICATE: ${{ secrets.MACOS_CERTIFICATE }}
+          MACOS_CERTIFICATE_PWD: ${{ secrets.MACOS_CERTIFICATE_PWD }}
+          KEYCHAIN_PWD: ${{ secrets.KEYCHAIN_PWD }}
+        run: |
+          echo "$MACOS_CERTIFICATE" | base64 --decode > certificate.p12
+          security create-keychain -p "$KEYCHAIN_PWD" build.keychain
+          security default-keychain -s build.keychain
+          security unlock-keychain -p "$KEYCHAIN_PWD" build.keychain
+          security import certificate.p12 -k build.keychain -P "$MACOS_CERTIFICATE_PWD" -T /usr/bin/codesign
+          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PWD" build.keychain
+          rm certificate.p12
 
       - name: Build app with py2app
         run: |
@@ -36,6 +50,12 @@ jobs:
         run: |
           ls -la dist/
           test -d dist/*.app
+
+      - name: Sign app
+        run: codesign --force --deep --sign "ZenCert" "dist/Zen Macro.app"
+
+      - name: Verify signature
+        run: codesign -dvvv "dist/Zen Macro.app"
 
       - name: Create DMG
         env:
