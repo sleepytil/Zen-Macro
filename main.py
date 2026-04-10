@@ -16,7 +16,6 @@ import requests
 import logging
 import pyautogui
 import webbrowser
-from PIL import Image
 from pathlib import Path
 
 class macroActivity(customtkinter.CTk):
@@ -32,6 +31,15 @@ class macroActivity(customtkinter.CTk):
         self.logger = logging.getLogger('mylogger')
 
         # Variables > Read Config
+        os.makedirs("images", exist_ok=True)
+        filename = os.path.join("images", f"screenshot_{int(time.time())}.png")
+        img = pyautogui.screenshot()
+        img.save(filename)
+        try:
+            os.remove(filename)
+        except Exception as e:
+            print(f"Failed to delete screenshot {filename}: {e}")
+        pyautogui.press("space")
         self.ROOT_DIR = Path.home() / "Documents" / "Zen Macro Data"
         self.config_name = 'config.ini'
         self.ROOT_DIR.mkdir(parents=True, exist_ok=True)
@@ -159,13 +167,9 @@ class macroActivity(customtkinter.CTk):
         self.state_label = customtkinter.CTkLabel(tabview.tab("Home"), text="Macro Stopped", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
         self.state_label.grid(row=1, column=0, padx=(0, 5), sticky="ne")
 
-        til_pfp = customtkinter.CTkImage(dark_image=Image.open("sleepytil.png"), size=(100, 100))
-        til_pfp_label = customtkinter.CTkLabel(tabview.tab("Credits"), image=til_pfp, text="")
-        til_pfp_label.grid(row=0, column=0, padx=(10, 0), pady=(10, 0), sticky="w")
-
         credits_frame = customtkinter.CTkFrame(tabview.tab("Credits"))
-        credits_frame.grid(row=0, column=1, padx=(10, 0), pady=(10, 0), sticky="w")
-        dev_label = customtkinter.CTkLabel(credits_frame, text="sleepytil - Creator", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
+        credits_frame.grid(row=0, column=0, padx=(10, 0), pady=(10, 0), sticky="w")
+        dev_label = customtkinter.CTkLabel(credits_frame, text="@sleepytil - Creator", font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"))
         dev_label.grid(row=0, column=0, padx=(10, 0), sticky="nw")
 
         dev_link = customtkinter.CTkLabel(credits_frame, text="GitHub", font=("Segoe UI", 14, "underline"), text_color="dodgerblue", cursor="pointinghand")
