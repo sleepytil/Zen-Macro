@@ -1,10 +1,10 @@
-[AURA DETECTION UPDATE - 2nd April]
-Added the April Fools 2026 auras to detection.
+[DEV NOTICE]: Development of the macro is slowed as my Mac broke. Sorry!
+- til
 
-Zen Macro (v2.1) - 28th March
+Zen Macro (v2.2) - 10th April
 Changelogs:
-- Added new icon
-- Added aura rarity detection functionality
-- Added aura pings depending on the rarity
-- Added new assets
-- Changed some UI
+- Added Anti-AFK
+- Added Eggland biome data
+- Added macro time
+- Reduced macro size
+- Streamlined saving
