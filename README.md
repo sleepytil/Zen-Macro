@@ -1,5 +1,5 @@
 <div align="left" style="text-align: left;">
-<h1><img src="zen.png" height="30px">  Zen</h1>
+<h1>Zen Macro</h1>
 <p> A Sol's RNG Macro to track Biomes, Merchants and Auras.<br>I am building off of maxstellar's Biome Macro for Mac.</p>
 
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/sleepytil/Zen-Macro/total)
