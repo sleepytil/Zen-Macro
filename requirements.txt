@@ -5,4 +5,4 @@ psutil==7.0.0
 pyautogui==0.9.54
 Requests==2.33.1
 setuptools==75.8.2
-Pillow=12.2.0
+Pillow==12.2.0
