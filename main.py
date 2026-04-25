@@ -566,8 +566,7 @@ class macroActivity(customtkinter.CTk):
                                                     event_biome_colour = "FFFFFF"
                                                 print(
                                                     time.strftime("%H:%M:%S")
-                                                    + f": Biome Ended - "
-                                                    + last_event
+                                                    + f": Biome Ended - {last_event}"
                                                 )
                                                 embed = discord_webhook.DiscordEmbed(
                                                     description=f"> ### Biome Ended - {last_event}",
@@ -665,8 +664,7 @@ class macroActivity(customtkinter.CTk):
                                             if last_event is not None:
                                                 print(
                                                     time.strftime("%H:%M:%S")
-                                                    + f": Biome Ended - "
-                                                    + last_event
+                                                    + f": Biome Ended - {last_event}"
                                                 )
                                                 event_biome_colour = ""
                                                 if last_event in self.biome_colours:
