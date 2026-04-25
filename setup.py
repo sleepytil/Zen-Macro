@@ -1,19 +1,18 @@
 from setuptools import setup
 
-
-APP = ['main.py']
+APP = ["main.py"]
 DATA_FILES = []
 OPTIONS = {
-    'argv_emulation': False,
-    'iconfile': 'zen.icns',
-    'resources': ['images', 'sleepytil.png'],
-    'excludes': ['rubicon'],
+    "argv_emulation": False,
+    "iconfile": "zen.icns",
+    "resources": ["images", "sleepytil.png"],
+    "excludes": ["rubicon"],
 }
 
 setup(
     app=APP,
-    name='Zen 2.2',
+    name="Zen 2.2.1",
     data_files=DATA_FILES,
-    options={'py2app': OPTIONS},
-    setup_requires=['py2app'],
+    options={"py2app": OPTIONS},
+    setup_requires=["py2app"],
 )
