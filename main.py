@@ -211,7 +211,7 @@ class macroActivity(customtkinter.CTk):
 
         version_label = customtkinter.CTkLabel(
             tabview.tab("Home"),
-            text="Build 2.2.1",
+            text="Build 2.2.2",
             font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"),
         )
         version_label.grid(row=1, column=0, padx=(5, 0), sticky="nw")
@@ -415,7 +415,7 @@ class macroActivity(customtkinter.CTk):
                 f"> ### **Macro Started**\n> **Webhooks Active**: {len(self.webhook_urls)}\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV"
             )
         embed.set_footer(
-            "Zen (2.2.1)", icon_url="https://sleepytil.github.io/images/zenicon.png"
+            "Zen (2.2.2)", icon_url="https://sleepytil.github.io/images/zenicon.png"
         )
         embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostart.png")
         embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
@@ -574,7 +574,7 @@ class macroActivity(customtkinter.CTk):
                                                     color=event_biome_colour,
                                                 )
                                                 embed.set_footer(
-                                                    "Zen (2.2.1)",
+                                                    "Zen (2.2.2)",
                                                     icon_url="https://sleepytil.github.io/images/zenicon.png",
                                                 )
                                                 embed.set_timestamp(
@@ -631,7 +631,7 @@ class macroActivity(customtkinter.CTk):
                                                 )
 
                                             embed.set_footer(
-                                                "Zen (2.2.1)",
+                                                "Zen (2.2.2)",
                                                 icon_url="https://sleepytil.github.io/images/zenicon.png",
                                             )
                                             embed.set_timestamp(
@@ -687,7 +687,7 @@ class macroActivity(customtkinter.CTk):
                                                         color=event_biome_colour,
                                                     )
                                                     embed.set_footer(
-                                                        "Zen (2.2.1)",
+                                                        "Zen (2.2.2)",
                                                         icon_url="https://sleepytil.github.io/images/zenicon.png",
                                                     )
                                                     embed.set_timestamp(
@@ -745,7 +745,7 @@ class macroActivity(customtkinter.CTk):
                                                         f"> ### Biome Started - {event}\n[Join Private Server]({self.psURL.get()})"
                                                     )
                                                 embed.set_footer(
-                                                    "Zen (2.2.1)",
+                                                    "Zen (2.2.2)",
                                                     icon_url="https://sleepytil.github.io/images/zenicon.png",
                                                 )
                                                 embed.set_timestamp(
@@ -806,7 +806,7 @@ class macroActivity(customtkinter.CTk):
                         description=f"> ### Roblox Closed/Crashed", color="FF0000"
                     )
                     close_embed.set_footer(
-                        "Zen (2.2.1)",
+                        "Zen (2.2.2)",
                         icon_url="https://sleepytil.github.io/images/zenicon.png",
                     )
                     close_embed.set_timestamp(
@@ -821,7 +821,7 @@ class macroActivity(customtkinter.CTk):
                             description=f"> ### Roblox Closed/Crashed", color="FF0000"
                         )
                         close_embed.set_footer(
-                            "Zen (2.2.1)",
+                            "Zen (2.2.2)",
                             icon_url="https://sleepytil.github.io/images/zenicon.png",
                         )
                         close_embed.set_timestamp(
@@ -905,7 +905,7 @@ class macroActivity(customtkinter.CTk):
                         color="FF0000",
                     )
                     ending_embed.set_footer(
-                        "Zen (2.2.1)",
+                        "Zen (2.2.2)",
                         icon_url="https://sleepytil.github.io/images/zenicon.png",
                     )
                     ending_embed.set_thumbnail(
@@ -923,7 +923,7 @@ class macroActivity(customtkinter.CTk):
                     color="FF0000",
                 )
                 ending_embed.set_footer(
-                    "Zen (2.2.1)",
+                    "Zen (2.2.2)",
                     icon_url="https://sleepytil.github.io/images/zenicon.png",
                 )
                 ending_embed.set_thumbnail(
@@ -950,7 +950,7 @@ class macroActivity(customtkinter.CTk):
             embed = {
                 "description": f"> ### Biome Screenshot - {biome}",
                 "color": 0xFFFFFF,
-                "footer": {"text": "Zen (2.2.1)", "icon_url": icon_url},
+                "footer": {"text": "Zen (2.2.2)", "icon_url": icon_url},
                 "timestamp": current_utc_time,
             }
             if self.multi_webhook.get() != "1":
@@ -1076,7 +1076,7 @@ class macroActivity(customtkinter.CTk):
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}\n> **Rarity**: 1 in {fRarity}",
                     "color": embedColour,
-                    "footer": {"text": "Zen (2.2.1)", "icon_url": icon_url},
+                    "footer": {"text": "Zen (2.2.2)", "icon_url": icon_url},
                     "timestamp": current_utc_time,
                 }
                 if self.multi_webhook.get() != "1":
@@ -1145,7 +1145,7 @@ class macroActivity(customtkinter.CTk):
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}",
                     "color": 0xFFFFFF,
-                    "footer": {"text": "Zen (2.2.1)", "icon_url": icon_url},
+                    "footer": {"text": "Zen (2.2.2)", "icon_url": icon_url},
                     "timestamp": current_utc_time,
                 }
                 if self.multi_webhook.get() != "1":

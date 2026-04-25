@@ -11,7 +11,7 @@ OPTIONS = {
 
 setup(
     app=APP,
-    name="Zen 2.2.1",
+    name="Zen 2.2.2",
     data_files=DATA_FILES,
     options={"py2app": OPTIONS},
     setup_requires=["py2app"],
