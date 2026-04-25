@@ -18,6 +18,7 @@ import platformdirs
 import psutil
 import pyautogui
 import requests
+from PIL import Image
 
 
 class macroActivity(customtkinter.CTk):
