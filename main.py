@@ -648,6 +648,7 @@ class macroActivity(customtkinter.CTk):
                                                 event == "GLITCHED"
                                                 or event == "DREAMSPACE"
                                                 or event == "CYBERSPACE"
+                                                or event == "SINGULARITY"
                                             ):
                                                 webhook.set_content("@everyone")
                                             webhook.execute()
@@ -655,6 +656,7 @@ class macroActivity(customtkinter.CTk):
                                                 event == "GLITCHED"
                                                 or event == "DREAMSPACE"
                                                 or event == "CYBERSPACE"
+                                                or event == "SINGULARITY"
                                             ):
                                                 self.send_rare_biome_screenshot(event)
                                     else:
@@ -765,6 +767,7 @@ class macroActivity(customtkinter.CTk):
                                                     event == "GLITCHED"
                                                     or event == "DREAMSPACE"
                                                     or event == "CYBERSPACE"
+                                                    or event == "SINGULARITY"
                                                 ):
                                                     webhook.set_content("@everyone")
                                                 webhook.execute()
@@ -772,6 +775,7 @@ class macroActivity(customtkinter.CTk):
                                                 event == "GLITCHED"
                                                 or event == "DREAMSPACE"
                                                 or event == "CYBERSPACE"
+                                                or event == "SINGULARITY"
                                             ):
                                                 self.send_rare_biome_screenshot(event)
                                     last_event = event
