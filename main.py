@@ -211,7 +211,7 @@ class macroActivity(customtkinter.CTk):
 
         version_label = customtkinter.CTkLabel(
             tabview.tab("Home"),
-            text="Build 2.2.2",
+            text="Build 2.2.3",
             font=customtkinter.CTkFont(family="Segoe UI", size=14, weight="bold"),
         )
         version_label.grid(row=1, column=0, padx=(5, 0), sticky="nw")
@@ -403,19 +403,19 @@ class macroActivity(customtkinter.CTk):
         if self.started:
             return
         embed = discord_webhook.DiscordEmbed(
-            description="> ### Macro Started\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
+            description="> ### Macro Started\n**Join our Discord server**:\nhttps://discord.gg/zs9b6CgegU",
             color="00FF00",
         )
         if self.multi_webhook.get() != "1":
             embed.set_description(
-                "> ### **Macro Started**\n> **Webhooks Active**: 1\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV"
+                "> ### **Macro Started**\n> **Webhooks Active**: 1\n\n**Join our Discord server**:\nhttps://discord.gg/zs9b6CgegU"
             )
         else:
             embed.set_description(
-                f"> ### **Macro Started**\n> **Webhooks Active**: {len(self.webhook_urls)}\n\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV"
+                f"> ### **Macro Started**\n> **Webhooks Active**: {len(self.webhook_urls)}\n\n**Join our Discord server**:\nhttps://discord.gg/zs9b6CgegU"
             )
         embed.set_footer(
-            "Zen (2.2.2)", icon_url="https://sleepytil.github.io/images/zenicon.png"
+            "Zen (2.2.3)", icon_url="https://sleepytil.github.io/images/zenicon.png"
         )
         embed.set_thumbnail(url="https://sleepytil.github.io/images/macrostart.png")
         embed.set_timestamp(datetime.datetime.now(datetime.timezone.utc))
@@ -463,19 +463,18 @@ class macroActivity(customtkinter.CTk):
         time.sleep(5)
         latest_log = self.getLatestLogFile()
         if not latest_log:
-            # logger.info(print("No log files found."))
+            self.logger.info(print("No log files found."))
             print("No log files found.")
             return
         with open(latest_log, "r", encoding="utf-8") as self.file:
             print(f"Using log file: {latest_log}")
             print()
-            # logger.info(f"Using log file: {latest_log}")
+            self.logger.info(f"Using log file: {latest_log}")
             self.title("Zen (Running)")
             self.state_label.configure(text="Macro Started")
             self.check_for_hover_text(self.file)
             for line in self.file:
                 if "[FLog::UpdateController] version response:" in line:
-                    found_update_version = True
                     try:
                         json_data_start = line.find('{"version')
                         if json_data_start != -1:
@@ -483,20 +482,10 @@ class macroActivity(customtkinter.CTk):
                             update_version = json_data.get("clientVersionUpload", "")
                             #    logger.info("Update version found: " + update_version)
                             print("Update version found: " + update_version)
-                    except:
+                    except Exception as e:
                         print(
-                            "Encountered error while parsing JSON to find Roblox update version."
+                            f"Encountered error while parsing JSON to find Roblox update version.\n{e}"
                         )
-                    #    logger.error("Encountered error while parsing JSON to find Roblox update version.")
-                    #    stop()
-                    # if update_version == last_roblox_version and update_version != "":
-                    #    pass
-                    # else:
-                    #    last_roblox_version = update_version
-                    # write new version to config
-                    #    config.set('Macro', 'last_roblox_version', last_roblox_version)
-                    #    with open(config_name, 'w+') as configfile:
-                    #    config.write(configfile)
 
     def getLatestLogFile(self):
         files = os.listdir(self.log_directory)
@@ -573,7 +562,7 @@ class macroActivity(customtkinter.CTk):
                                                     color=event_biome_colour,
                                                 )
                                                 embed.set_footer(
-                                                    "Zen (2.2.2)",
+                                                    "Zen (2.2.3)",
                                                     icon_url="https://sleepytil.github.io/images/zenicon.png",
                                                 )
                                                 embed.set_timestamp(
@@ -610,7 +599,7 @@ class macroActivity(customtkinter.CTk):
                                             )
                                             if (
                                                 event in self.biome_times
-                                                and event != "EGGLAND"
+                                                and event != "NORMAL"
                                             ):
                                                 biomeEndingTime = int(
                                                     time.time()
@@ -630,7 +619,7 @@ class macroActivity(customtkinter.CTk):
                                                 )
 
                                             embed.set_footer(
-                                                "Zen (2.2.2)",
+                                                "Zen (2.2.3)",
                                                 icon_url="https://sleepytil.github.io/images/zenicon.png",
                                             )
                                             embed.set_timestamp(
@@ -683,7 +672,7 @@ class macroActivity(customtkinter.CTk):
                                                         color=event_biome_colour,
                                                     )
                                                     embed.set_footer(
-                                                        "Zen (2.2.2)",
+                                                        "Zen (2.2.3)",
                                                         icon_url="https://sleepytil.github.io/images/zenicon.png",
                                                     )
                                                     embed.set_timestamp(
@@ -722,7 +711,7 @@ class macroActivity(customtkinter.CTk):
                                                 )
                                                 if (
                                                     event in self.biome_times
-                                                    and event != "EGGLAND"
+                                                    and event != "NORMAL"
                                                 ):
                                                     biomeEndingTime = int(
                                                         time.time()
@@ -741,7 +730,7 @@ class macroActivity(customtkinter.CTk):
                                                         f"> ### Biome Started - {event}\n[Join Private Server]({self.psURL.get()})"
                                                     )
                                                 embed.set_footer(
-                                                    "Zen (2.2.2)",
+                                                    "Zen (2.2.3)",
                                                     icon_url="https://sleepytil.github.io/images/zenicon.png",
                                                 )
                                                 embed.set_timestamp(
@@ -797,10 +786,10 @@ class macroActivity(customtkinter.CTk):
                         return
                     close_webhook = discord_webhook.DiscordWebhook(url=url)
                     close_embed = discord_webhook.DiscordEmbed(
-                        description=f"> ### Roblox Closed/Crashed", color="FF0000"
+                        description="> ### Roblox Closed/Crashed", color="FF0000"
                     )
                     close_embed.set_footer(
-                        "Zen (2.2.2)",
+                        "Zen (2.2.3)",
                         icon_url="https://sleepytil.github.io/images/zenicon.png",
                     )
                     close_embed.set_timestamp(
@@ -812,10 +801,10 @@ class macroActivity(customtkinter.CTk):
                     for url in self.webhook_urls:
                         close_webhook = discord_webhook.DiscordWebhook(url=url)
                         close_embed = discord_webhook.DiscordEmbed(
-                            description=f"> ### Roblox Closed/Crashed", color="FF0000"
+                            description="> ### Roblox Closed/Crashed", color="FF0000"
                         )
                         close_embed.set_footer(
-                            "Zen (2.2.2)",
+                            "Zen (2.2.3)",
                             icon_url="https://sleepytil.github.io/images/zenicon.png",
                         )
                         close_embed.set_timestamp(
@@ -895,11 +884,11 @@ class macroActivity(customtkinter.CTk):
                         url=self.webhookURL.get()
                     )
                     ending_embed = discord_webhook.DiscordEmbed(
-                        description=f"> ### Macro Stopped\n**Runtime**: `{str(datetime.timedelta(seconds=int((time.time() - self.macro_start_time))))}`\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
+                        description=f"> ### Macro Stopped\n**Runtime**: `{str(datetime.timedelta(seconds=int((time.time() - self.macro_start_time))))}`\n**Join our Discord server**:\nhttps://discord.gg/zs9b6CgegU",
                         color="FF0000",
                     )
                     ending_embed.set_footer(
-                        "Zen (2.2.2)",
+                        "Zen (2.2.3)",
                         icon_url="https://sleepytil.github.io/images/zenicon.png",
                     )
                     ending_embed.set_thumbnail(
@@ -913,11 +902,11 @@ class macroActivity(customtkinter.CTk):
 
             else:
                 ending_embed = discord_webhook.DiscordEmbed(
-                    description=f"> ### Macro Stopped\n**Runtime**: `{str(datetime.timedelta(seconds=int((time.time() - self.macro_start_time))))}`\n**Join our Discord server**:\nhttps://discord.gg/xymDbw7jJV",
+                    description=f"> ### Macro Stopped\n**Runtime**: `{str(datetime.timedelta(seconds=int((time.time() - self.macro_start_time))))}`\n**Join our Discord server**:\nhttps://discord.gg/zs9b6CgegU",
                     color="FF0000",
                 )
                 ending_embed.set_footer(
-                    "Zen (2.2.2)",
+                    "Zen (2.2.3)",
                     icon_url="https://sleepytil.github.io/images/zenicon.png",
                 )
                 ending_embed.set_thumbnail(
@@ -944,7 +933,7 @@ class macroActivity(customtkinter.CTk):
             embed = {
                 "description": f"> ### Biome Screenshot - {biome}",
                 "color": 0xFFFFFF,
-                "footer": {"text": "Zen (2.2.2)", "icon_url": icon_url},
+                "footer": {"text": "Zen (2.2.3)", "icon_url": icon_url},
                 "timestamp": current_utc_time,
             }
             if self.multi_webhook.get() != "1":
@@ -1070,7 +1059,7 @@ class macroActivity(customtkinter.CTk):
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}\n> **Rarity**: 1 in {fRarity}",
                     "color": embedColour,
-                    "footer": {"text": "Zen (2.2.2)", "icon_url": icon_url},
+                    "footer": {"text": "Zen (2.2.3)", "icon_url": icon_url},
                     "timestamp": current_utc_time,
                 }
                 if self.multi_webhook.get() != "1":
@@ -1139,7 +1128,7 @@ class macroActivity(customtkinter.CTk):
                 embed = {
                     "description": f"> ### Aura Equipped - {fAura}",
                     "color": 0xFFFFFF,
-                    "footer": {"text": "Zen (2.2.2)", "icon_url": icon_url},
+                    "footer": {"text": "Zen (2.2.3)", "icon_url": icon_url},
                     "timestamp": current_utc_time,
                 }
                 if self.multi_webhook.get() != "1":

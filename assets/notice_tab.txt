@@ -1,10 +1,4 @@
-[DEV NOTICE]: Development of the macro is slowed as my Mac broke. Sorry!
-- til
+Zen Macro (v2.2.3) - 12th June
 
-Zen Macro (v2.2) - 10th April
-Changelogs:
-- Added Anti-AFK
-- Added Eggland biome data
-- Added macro time
-- Reduced macro size
-- Streamlined saving
+This update brings important fixes to the macro.
+Happy macroing!
