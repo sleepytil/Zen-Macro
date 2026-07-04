@@ -1,4 +1,6 @@
-<div align="left" style="text-align: left;">
+> **This repository is archived.**
+> Development has been stopped completely.
+
 <h1>Zen Macro</h1>
 <p> A Sol's RNG Macro to track Biomes, Merchants and Auras.<br>I am building off of maxstellar's Biome Macro for Mac.</p>
 
